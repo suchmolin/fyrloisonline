@@ -11,7 +11,7 @@ export default function DropDownMenu() {
 
   return (
     <>
-      <Dropdown label={label} inline size="sm" className="">
+      <Dropdown aria-label="menu" label={label} inline size="sm" className="">
         <Dropdown.Item as={Link} href="https://fyrlois.us">
           <span className="flex gap-1">
             <Image
