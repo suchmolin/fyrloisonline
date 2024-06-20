@@ -1,18 +1,23 @@
+"use client";
 import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 
 export default function SubSeccionCursos() {
   return (
-    <div className="w-full py-20 flex flex-col items-center justify-center">
+    <Fade
+      triggerOnce
+      className="w-full my-14 flex flex-col items-center justify-center"
+    >
       <div className="w-5/12">
         <h3 className="text-4xl text-[#000b7a] text-center font-bold">
           Un curso de inglés adaptado a tus necesidades.
         </h3>
-        <p className="text-center py-5 text-xl text-gray-500">
+        <p className="text-center pt-5 text-xl text-gray-500">
           Hemos diseñado diferentes opciones, para que disfrutes la experiencia
           de aprender inglés al máximo.
         </p>
       </div>
-      <div className="w-10/12 flex justify-center gap-5 mt-5">
+      <div className="w-10/12 flex justify-center gap-5">
         <div className="text-center justify-center flex flex-col items-center px-4 w-4/12">
           <Image
             src="/img/subCurso1.png"
@@ -83,6 +88,6 @@ export default function SubSeccionCursos() {
           </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 }

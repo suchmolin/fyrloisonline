@@ -1,8 +1,10 @@
+"use client";
+import { Slide } from "react-awesome-reveal";
 import CursosBox from "../CursosBox/page";
 
 export default function SeccionCursos() {
   return (
-    <div className="w-full flex justify-center">
+    <Slide triggerOnce direction="up" className="w-full flex justify-center">
       <div className="w-10/12 border-b-[1px] border-[#000b7a] py-20">
         <div className="w-full flex justify-between">
           <div className="w-6/12">
@@ -24,6 +26,6 @@ export default function SeccionCursos() {
           <CursosBox />
         </div>
       </div>
-    </div>
+    </Slide>
   );
 }
