@@ -11,7 +11,14 @@ export default function DropDownMenu() {
 
   return (
     <>
-      <Dropdown aria-label="menu" label={label} inline size="sm" className="">
+      <Dropdown
+        ariaLabel="menu"
+        name="menu"
+        label={label}
+        inline
+        size="sm"
+        className=""
+      >
         <Dropdown.Item as={Link} href="https://fyrlois.us">
           <span className="flex gap-1">
             <Image
