@@ -30,10 +30,16 @@ export default function HeaderPrincipal() {
                 Diviértete aprendiendo el idioma y comunícate donde quieras.
               </h2>
               <div className="flex gap-10 h-[60px] items-center">
-                <button className=" py-4 px-7 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-white transition-all duration-500 font-bold">
+                <button
+                  ariaLabel="TConoce nuestros cursos"
+                  className=" py-4 px-7 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-white transition-all duration-500 font-bold"
+                >
                   CONOCE NUESTROS CURSOS
                 </button>
-                <button className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold ">
+                <button
+                  ariaLabel="Acerca de Nosotros"
+                  className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
+                >
                   ACERCA DE NOSOTROS
                 </button>
               </div>

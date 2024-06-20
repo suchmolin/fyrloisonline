@@ -25,7 +25,10 @@ export default function MenuHeader() {
           <IoCartOutline className="text-3xl text-[#000b7a] scale-x-[-1] cursor-pointer" />
         </div>
         <div className="flex items-center h-full">
-          <button className="py-2 px-4 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-white transition-all duration-500 ">
+          <button
+            ariaLabel="Nuestros cursos"
+            className="py-2 px-4 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-white transition-all duration-500 "
+          >
             Cursos
           </button>
         </div>

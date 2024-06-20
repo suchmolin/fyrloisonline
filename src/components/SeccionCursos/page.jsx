@@ -17,7 +17,10 @@ export default function SeccionCursos() {
             </p>
           </div>
           <div className="">
-            <button className="z-20 py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold ">
+            <button
+              ariaLabel="Conoce mas"
+              className="z-20 py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
+            >
               CONOCE MÁS
             </button>
           </div>
