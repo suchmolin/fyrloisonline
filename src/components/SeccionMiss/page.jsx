@@ -33,7 +33,7 @@ export default function SeccionMiss() {
             </p>
             <div className="flex h-[70px] items-center mt-5">
               <button className=" py-4 px-7 bg-[#90d400] hover:bg-transparent hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#90d400] hover:border-[#fff] transition-all duration-200 font-bold z-20">
-                ACERCA DE NOSOTROS
+                ACERCA DE NOSOTROS1
               </button>
             </div>
           </div>
