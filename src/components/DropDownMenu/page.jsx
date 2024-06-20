@@ -12,7 +12,7 @@ export default function DropDownMenu() {
   return (
     <>
       <Dropdown
-        ariaLabel="menu"
+        aria-label="menu"
         name="menu"
         label={label}
         inline

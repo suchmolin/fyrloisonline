@@ -33,7 +33,7 @@ export default function SeccionMiss() {
             </p>
             <div className="flex h-[70px] items-center mt-5">
               <button
-                ariaLabel="Acerca de nosotros"
+                aria-label="Acerca de nosotros"
                 className=" py-4 px-7 bg-[#90d400] hover:bg-transparent hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#90d400] hover:border-[#fff] transition-all duration-200 font-bold z-20"
               >
                 ACERCA DE NOSOTROS
@@ -46,7 +46,7 @@ export default function SeccionMiss() {
                 src="/img/missworld.jpeg"
                 alt="Alejandra Conde - Miss World"
                 width={430}
-                height={450}
+                height={314}
               />
             </div>
           </div>

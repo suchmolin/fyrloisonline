@@ -21,7 +21,7 @@ export default function AniversarySection() {
             src="/img/25aniversary.png"
             alt="25 aniversary fyrlois"
             width={330}
-            height={300}
+            height={272}
           />
           <div>
             <h3 className="text-4xl font-bold text-[#000b7a] pb-7">
@@ -37,7 +37,7 @@ export default function AniversarySection() {
             </p>
             <div className="h-[80px] flex items-center">
               <button
-                ariaLabel="Todos los cursos"
+                aria-label="Todos los cursos"
                 className="z-20 py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
               >
                 TODOS LOS CURSOS

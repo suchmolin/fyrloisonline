@@ -12,7 +12,7 @@ export default function CursosBox() {
         >
           <Image
             width={300}
-            height={100}
+            height={300}
             src={`/img/${curso.img}`}
             alt={curso.title}
           />

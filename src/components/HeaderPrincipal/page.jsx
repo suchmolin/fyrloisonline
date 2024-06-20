@@ -31,13 +31,13 @@ export default function HeaderPrincipal() {
               </h2>
               <div className="flex gap-10 h-[60px] items-center">
                 <button
-                  ariaLabel="TConoce nuestros cursos"
+                  aria-label="TConoce nuestros cursos"
                   className=" py-4 px-7 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-white transition-all duration-500 font-bold"
                 >
                   CONOCE NUESTROS CURSOS
                 </button>
                 <button
-                  ariaLabel="Acerca de Nosotros"
+                  aria-label="Acerca de Nosotros"
                   className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
                 >
                   ACERCA DE NOSOTROS
@@ -51,7 +51,7 @@ export default function HeaderPrincipal() {
                 src="/img/62f6a06787ee5b7f984961cd_foto-header.jpg"
                 alt="header principal"
                 width={430}
-                height={450}
+                height={572}
               />
             </div>
           </Fade>

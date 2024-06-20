@@ -23,7 +23,7 @@ export default function SubSeccionCursos() {
             src="/img/subCurso1.png"
             alt="subCurso1"
             width={250}
-            height={250}
+            height={194}
           />
           <h4 className="mt-2 py-3 text-[#000b7a] text-2xl font-bold">
             Curso de Inglés Regular
@@ -37,7 +37,7 @@ export default function SubSeccionCursos() {
           </p>
           <div className="h-[100px] flex items-center mt-4">
             <button
-              ariaLabel="Más informacion"
+              aria-label="Más informacion"
               className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
             >
               MÁS INFORMACIÓN
@@ -49,7 +49,7 @@ export default function SubSeccionCursos() {
             src="/img/subCurso2.png"
             alt="subCurso2"
             width={250}
-            height={250}
+            height={194}
           />
           <h4 className="mt-2 py-3 text-[#000b7a] text-2xl font-bold">
             Curso de inglés intensivo
@@ -63,7 +63,7 @@ export default function SubSeccionCursos() {
           </p>
           <div className="h-[100px] flex items-center mt-4">
             <button
-              ariaLabel="Más información"
+              aria-label="Más información"
               className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
             >
               MÁS INFORMACIÓN
@@ -75,7 +75,7 @@ export default function SubSeccionCursos() {
             src="/img/subCurso3.png"
             alt="subCurso3"
             width={250}
-            height={250}
+            height={194}
           />
           <h4 className="mt-2 py-3 text-[#000b7a] text-2xl font-bold">
             Curso de inglés personalizado
@@ -89,7 +89,7 @@ export default function SubSeccionCursos() {
           </p>
           <div className="h-[100px] flex items-center mt-4">
             <button
-              ariaLabel="Más información"
+              aria-label="Más información"
               className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
             >
               MÁS INFORMACIÓN
