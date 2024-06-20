@@ -19,7 +19,7 @@ export default function HeaderPrincipal() {
           <li></li>
         </ul>
 
-        <div className=" h-[600px] flex gap-20 justify-center items-center">
+        <div className=" h-[600px] flex gap-20 justify-center items-center bg-white">
           <Fade triggerOnce className="w-6/12">
             <div className="">
               <h1 className="text-7xl font-bold text-[#000b7a] leading-tight">

@@ -1,5 +1,6 @@
 "use client";
-import { Dropdown, Link } from "flowbite-react";
+import { Dropdown } from "flowbite-react";
+import Link from "next/link";
 
 import { TfiWorld } from "react-icons/tfi";
 

@@ -15,7 +15,7 @@ export default function AniversarySection() {
         <li></li>
         <li></li>
       </ul>
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center bg-white">
         <div className="w-10/12 flex gap-16 border-b-[1px] border-[#000b7a]  py-20">
           <Image
             src="/img/25aniversary.png"
