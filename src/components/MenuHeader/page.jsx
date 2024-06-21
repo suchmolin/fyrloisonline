@@ -15,7 +15,7 @@ export default function MenuHeader() {
                 alt="logo"
                 width={170}
                 height={65}
-                priority
+                loading="eager"
               />
             </a>
             <div className="hidden lg:flex">
