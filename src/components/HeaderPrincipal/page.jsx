@@ -52,6 +52,7 @@ export default function HeaderPrincipal() {
                 alt="header principal"
                 width={430}
                 height={572}
+                loading="eager"
               />
             </div>
           </Fade>
