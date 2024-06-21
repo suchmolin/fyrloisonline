@@ -16,9 +16,9 @@ export default function SeccionMiss() {
           <li></li>
           <li></li>
         </ul>
-        <div className="h-[650px] w-full bg-[#000b7a] flex justify-center items-center">
-          <div className="w-6/12 pr-20">
-            <h3 className="text-5xl text-[#90d400] font-bold pb-5">
+        <div className="min-h-[650px] w-full bg-[#000b7a] flex  flex-col lg:flex-row justify-center items-center py-10 lg:py-0 text-center lg:text-start">
+          <div className="w-11/12 md:w-10/12 lg:w-6/12 px-0 md:px-10 lg:pr-20 flex flex-col items-center lg:items-start">
+            <h3 className="text-3xl md:text-5xl text-[#90d400] font-bold pb-5">
               Fyr Lois fue una pieza clave en mi formación como Miss World.
             </h3>
             <p className="text-white text-lg py-4">
@@ -31,7 +31,7 @@ export default function SeccionMiss() {
             <p className="text-white text-xl py-4">
               Alejandra Conde - Miss Venezuela World 2020
             </p>
-            <div className="flex h-[70px] items-center mt-5">
+            <div className="flex h-[70px] items-center justify-center lg:justify-start mt-5 pb-10 lg:pb-0">
               <button
                 aria-label="Acerca de nosotros"
                 className=" py-4 px-7 bg-[#90d400] hover:bg-transparent hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#90d400] hover:border-[#fff] transition-all duration-200 font-bold z-20"
@@ -41,7 +41,7 @@ export default function SeccionMiss() {
             </div>
           </div>
           <div className="">
-            <div className="overflow-hidden rounded-xl w-fit">
+            <div className="overflow-hidden rounded-xl">
               <Image
                 src="/img/missworld.jpeg"
                 alt="Alejandra Conde - Miss World"

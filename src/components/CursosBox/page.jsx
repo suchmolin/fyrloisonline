@@ -3,19 +3,21 @@ import Image from "next/image";
 
 export default function CursosBox() {
   return (
-    <div className="w-full flex gap-5">
+    <div className="w-full flex gap-6 flex-wrap lg:flex-nowrap justify-center lg:justify-start">
       {cursosInfo.map((curso, index) => (
         <a
           key={index}
           href={curso.redirect}
-          className="flex flex-col justify-between min-h-[400px] w-3/12 rounded-lg shadow-2xl overflow-hidden hover:scale-[0.98] transition-all duration-300"
+          className="flex flex-col justify-between min-h-[400px] w-11/12 sm:w-8/12 md:w-5/12 lg:w-3/12 rounded-lg shadow-2xl overflow-hidden hover:scale-[0.98] transition-all duration-300"
         >
-          <Image
-            width={300}
-            height={300}
-            src={`/img/${curso.img}`}
-            alt={curso.title}
-          />
+          <div className="relative w-full min-h-[300px]">
+            <Image
+              layout="fill"
+              objectFit="cover"
+              src={`/img/${curso.img}`}
+              alt={curso.title}
+            />
+          </div>
           <div className="mx-5 py-3 ">
             <h4 className="text-xl font-bold text-[#000b7a] py-2">
               {curso.title}

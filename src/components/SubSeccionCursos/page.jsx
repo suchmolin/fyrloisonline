@@ -8,7 +8,7 @@ export default function SubSeccionCursos() {
       triggerOnce
       className="w-full my-14 flex flex-col items-center justify-center"
     >
-      <div className="w-5/12">
+      <div className="w-10/12 md:w-8/12 lg:w-5/12">
         <h3 className="text-4xl text-[#000b7a] text-center font-bold">
           Un curso de inglés adaptado a tus necesidades.
         </h3>
@@ -17,8 +17,8 @@ export default function SubSeccionCursos() {
           de aprender inglés al máximo.
         </p>
       </div>
-      <div className="w-10/12 flex justify-center gap-5">
-        <div className="text-center justify-center flex flex-col items-center px-4 w-4/12">
+      <div className="w-10/12 flex flex-col md:flex-row items-center justify-center gap-5">
+        <div className="text-center justify-center flex flex-col items-center px-4 w-10/12 md:w-4/12">
           <Image
             src="/img/subCurso1.png"
             alt="subCurso1"
@@ -44,7 +44,7 @@ export default function SubSeccionCursos() {
             </button>
           </div>
         </div>
-        <div className="text-center justify-center flex flex-col items-center px-4 w-4/12">
+        <div className="text-center justify-center flex flex-col items-center px-4 w-10/12  md:w-4/12">
           <Image
             src="/img/subCurso2.png"
             alt="subCurso2"
@@ -70,7 +70,7 @@ export default function SubSeccionCursos() {
             </button>
           </div>
         </div>
-        <div className="text-center justify-center flex flex-col items-center px-4 w-4/12">
+        <div className="text-center justify-center flex flex-col items-center px-4 w-10/12 md:w-4/12">
           <Image
             src="/img/subCurso3.png"
             alt="subCurso3"

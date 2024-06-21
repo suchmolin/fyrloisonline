@@ -6,11 +6,14 @@ import TrabajamosCon from "@/components/TrabajamosCon/page";
 import SeccionCursos from "@/components/SeccionCursos/page";
 import SubSeccionCursos from "@/components/SubSeccionCursos/page";
 import SeccionMiss from "@/components/SeccionMiss/page";
+import ComoAprenderas from "@/components/ComoAprenderas/page";
+import LlevaTuProyecto from "@/components/LlevaTuProyecto/page";
+import Footer from "@/components/Footer/page";
 
 export default function Home() {
   return (
     <main className="w-full font-[lato]">
-      <NavBar />
+      {/*<NavBar />*/}
       <MenuHeader />
       <HeaderPrincipal />
       <TrabajamosCon />
@@ -18,6 +21,9 @@ export default function Home() {
       <SeccionCursos />
       <SubSeccionCursos />
       <SeccionMiss />
+      <ComoAprenderas />
+      <LlevaTuProyecto />
+      <Footer />
     </main>
   );
 }

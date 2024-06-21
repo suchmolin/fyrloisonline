@@ -51,10 +51,12 @@ export default function TrabajamosCon() {
     <>
       <Fade
         triggerOnce
-        className="bottomDivider w-full h-[300px] bg-[#fafafa] text-[#000b7a] flex flex-col items-center justify-center text-center text-2xl"
+        className="bottomDivider w-full h-[300px] bg-[#fafafa] text-[#000b7a] flex flex-col items-center justify-center text-center text-2xl px-4"
       >
         <div>
-          <h3 className="text-2xl w-full">TRABAJAMOS CON COMPAÑIAS COMO</h3>
+          <h3 className="text-xl lg:text-2xl w-full">
+            TRABAJAMOS CON COMPAÑIAS COMO
+          </h3>
           <div className="w-full flex gap-3 justify-center py-7">
             {imagenes.map((imagen, index) => (
               <div key={index}>
