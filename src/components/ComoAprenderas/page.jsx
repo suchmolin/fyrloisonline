@@ -8,12 +8,14 @@ export default function ComoAprenderas() {
           <h3 className="text-3xl md:text-4xl font-bold text-[#000b7a]">
             ¿Cómo aprenderás inglés con nosotros?
           </h3>
-          <button
-            aria-label="TConoce nuestros cursos"
-            className=" py-4 px-7 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-white transition-all duration-500 font-bold mt-5 md:mt-0"
-          >
-            NUESTROS CURSOS
-          </button>
+          <div className="h-[70px] flex items-center">
+            <button
+              aria-label="Conoce nuestros cursos"
+              className=" py-4 px-7 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white  transition-all duration-500 font-bold mt-5 md:mt-0"
+            >
+              NUESTROS CURSOS
+            </button>
+          </div>
         </div>
         <div className="w-full flex flex-col md:flex-row gap-10 lg:gap-20 justify-center">
           <div className="w-12/12 sm:w-11/12 md:w-5/12 flex flex-col gap-20 border-0 lg:border-r-[1px] border-[#000b7a]">

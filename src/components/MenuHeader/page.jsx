@@ -29,7 +29,7 @@ export default function MenuHeader() {
             <div className="flex items-center h-full">
               <button
                 aria-label="Nuestros cursos"
-                className="py-2 px-4 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-white transition-all duration-500 "
+                className="py-2 px-4 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white transition-all duration-500 "
               >
                 Cursos
               </button>
