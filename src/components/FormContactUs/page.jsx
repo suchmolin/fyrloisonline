@@ -1,0 +1,92 @@
+import { FloatingLabel, Label, Select } from "flowbite-react";
+import Image from "next/image";
+
+export default function FormContactUs() {
+  return (
+    <div className="w-10/12 rounded-xl shadow-2xl mt-10 flex flex-col justify-center items-center">
+      <div className="w-10/12 flex gap-5 justify-center py-10 border-gray-500 border-b-[1px]">
+        <div className="w-8/12">
+          <h2 className="text-[#000b7a] text-5xl py-4">Contáctanos</h2>
+          <p className="text-gray-500">
+            Si quieres saber más información acerca de nuestros cursos, completa
+            tus datos y responderemos todas tus dudas.
+          </p>
+        </div>
+        <div className="w-[90px] h-[90px] p-4 rounded-full shadow-2xl">
+          <Image
+            src="/img/sobre.svg"
+            alt="Contact Us"
+            width={200}
+            height={200}
+          />
+        </div>
+      </div>
+      <div className="w-10/12 py-10 flex flex-wrap gap-5 justify-center">
+        <div className="w-5/12">
+          <FloatingLabel variant="filled" label="Nombre y Apellido" />
+        </div>
+        <div className="w-5/12">
+          <FloatingLabel variant="filled" label="Email" />
+        </div>
+        <div className="w-10/12">
+          <FloatingLabel variant="filled" label="Numero Telefónico" />
+        </div>
+        <div className="w-10/12">
+          <div className="mb-2 block">
+            <Label
+              htmlFor="porqueAprender"
+              value="¿Por qué motivo quieres aprender inglés?"
+              className="text-xl text-[#000b7a]"
+            />
+          </div>
+          <Select id="porqueAprender" required>
+            <option>Seleccione</option>
+            <option>Social</option>
+            <option>Personal</option>
+            <option>Familiar</option>
+            <option>Laboral</option>
+          </Select>
+        </div>
+        <div className="w-10/12">
+          <div className="mb-2 block">
+            <Label
+              htmlFor="comoNosConociste"
+              value="¿Cómo nos conociste?"
+              className="text-xl text-[#000b7a]"
+            />
+          </div>
+          <Select id="comoNosConociste" required>
+            <option>Seleccione</option>
+            <option>Un amigo/Familiar</option>
+            <option>Facebook</option>
+            <option>Instagram</option>
+            <option>Google</option>
+            <option>Google ads</option>
+          </Select>
+        </div>
+        <div className="w-10/12">
+          <div className="mb-2 block">
+            <Label
+              htmlFor="hasEstudiadoAntes"
+              value="¿Has estudiado el idioma antes?"
+              className="text-xl text-[#000b7a]"
+            />
+          </div>
+          <Select id="hasEstudiadoAntes" required>
+            <option>Seleccione</option>
+            <option>si</option>
+            <option>no</option>
+          </Select>
+        </div>
+        <div className="w-10/12 h-[70px] flex items-center">
+          <button
+            aria-label="TConoce nuestros cursos"
+            className=" py-4 px-7 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-white transition-all duration-500 font-bold text-xs md:text-base"
+          >
+            Enviar Mensaje
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}

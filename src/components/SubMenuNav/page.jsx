@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SubMenuNav() {
   return (
     <ul className="flex gap-5 lg:gap-10 justify-center items-center h-full text-[#000b7a]">
@@ -6,7 +8,7 @@ export default function SubMenuNav() {
       </li>
 
       <li>
-        <a href="#">Cursos</a>
+        <Link href="/courses">Cursos</Link>
       </li>
 
       <li>
@@ -14,7 +16,7 @@ export default function SubMenuNav() {
       </li>
 
       <li>
-        <a href="#">Contacto</a>
+        <Link href="/contact-us">Contacto</Link>
       </li>
 
       <li>

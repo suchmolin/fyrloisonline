@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="w-full font-[lato]">
       {/*<NavBar />*/}
-      <MenuHeader />
+
       <HeaderPrincipal />
       <TrabajamosCon />
       <AniversarySection />
@@ -23,7 +23,6 @@ export default function Home() {
       <SeccionMiss />
       <ComoAprenderas />
       <LlevaTuProyecto />
-      <Footer />
     </main>
   );
 }
