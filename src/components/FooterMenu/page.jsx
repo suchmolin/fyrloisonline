@@ -32,7 +32,7 @@ export default function FooterMenu() {
             <Link href="/contact-us">Contacto</Link>
           </li>
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
-            Políticas de privacidad
+            <Link href="/politicas-de-privacidad">Políticas de </Link>privacidad
           </li>
         </ul>
       </div>

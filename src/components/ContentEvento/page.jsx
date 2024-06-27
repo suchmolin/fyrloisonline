@@ -14,14 +14,15 @@ export default function ContentEvento({ data }) {
                 {item.titulo}
               </h2>
             )}
-            {item.texto && (
-              <p
-                key={"texto" + i}
-                className="text-gray-500 text-lg py-5 px-1 md:px-5"
-              >
-                {item.texto}
-              </p>
-            )}
+            {item.texto &&
+              item.texto.map((item, i) => (
+                <p
+                  key={"texto" + i}
+                  className="text-gray-500 text-lg py-5 px-1 md:px-5"
+                >
+                  {item}
+                </p>
+              ))}
             {item.img && (
               <div className="w-full flex justify-center">
                 <Image

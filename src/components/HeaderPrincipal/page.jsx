@@ -2,6 +2,7 @@
 import Image from "next/image";
 import "./page.css";
 import { Fade } from "react-awesome-reveal";
+import Link from "next/link";
 export default function HeaderPrincipal() {
   return (
     <section className="topDivider relative pb-20">
@@ -30,18 +31,20 @@ export default function HeaderPrincipal() {
                 Diviértete aprendiendo el idioma y comunícate donde quieras.
               </h2>
               <div className="flex gap-10 h-[60px] items-center justify-center md:justify-start">
-                <button
+                <Link
+                  href="/courses"
                   aria-label="TConoce nuestros cursos"
                   className=" py-4 px-7 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-white transition-all duration-500 font-bold text-xs md:text-base"
                 >
                   NUESTROS CURSOS
-                </button>
-                <button
+                </Link>
+                <Link
+                  href="/about-us"
                   aria-label="Acerca de Nosotros"
                   className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold text-xs md:text-base"
                 >
                   ACERCA DE NOSOTROS
-                </button>
+                </Link>
               </div>
             </div>
           </Fade>

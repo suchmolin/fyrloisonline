@@ -1,6 +1,7 @@
 "use client";
 import { Slide } from "react-awesome-reveal";
 import CursosBox from "../CursosBox/page";
+import Link from "next/link";
 
 export default function SeccionCursos() {
   return (
@@ -17,12 +18,13 @@ export default function SeccionCursos() {
             </p>
           </div>
           <div className="">
-            <button
+            <Link
+              href="/courses"
               aria-label="Conoce mas"
               className="hidden md:block z-20 py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
             >
               TODOS LOS CURSOS
-            </button>
+            </Link>
           </div>
         </div>
         <div className="w-full py-10 flex justify-center">

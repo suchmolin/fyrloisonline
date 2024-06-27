@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./page.css";
+import Link from "next/link";
 export default function SeccionMiss() {
   return (
     <div className="w-full">
@@ -32,12 +33,13 @@ export default function SeccionMiss() {
               Alejandra Conde - Miss Venezuela World 2020
             </p>
             <div className="flex h-[70px] items-center justify-center lg:justify-start mt-5 pb-10 lg:pb-0">
-              <button
+              <Link
+                href="/about-us"
                 aria-label="Acerca de nosotros"
                 className=" py-4 px-7 bg-[#90d400] hover:bg-transparent hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#90d400] hover:border-[#fff] transition-all duration-200 font-bold z-20"
               >
                 ACERCA DE NOSOTROS
-              </button>
+              </Link>
             </div>
           </div>
           <div className="">

@@ -4,7 +4,6 @@ export default function BlogUltimosArticulos() {
   return (
     <div className="w-full justify-center flex flex-wrap gap-10">
       {data.map((item, index) => {
-        console.log(item.tarjeta);
         return (
           <a
             key={item.id}

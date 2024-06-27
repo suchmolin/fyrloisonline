@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
 export default function SubSeccionCursos() {
@@ -36,12 +37,13 @@ export default function SubSeccionCursos() {
             alterar tu agenda.
           </p>
           <div className="h-[100px] flex items-center mt-4">
-            <button
+            <Link
+              href="/about-us"
               aria-label="Más informacion"
               className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
             >
               MÁS INFORMACIÓN
-            </button>
+            </Link>
           </div>
         </div>
         <div className="text-center justify-center flex flex-col items-center px-4 w-10/12  md:w-4/12">
@@ -62,12 +64,13 @@ export default function SubSeccionCursos() {
             es el curso ideal para ti, que quieres avanzar más rápido.
           </p>
           <div className="h-[100px] flex items-center mt-4">
-            <button
+            <Link
+              href="/about-us"
               aria-label="Más información"
               className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
             >
               MÁS INFORMACIÓN
-            </button>
+            </Link>
           </div>
         </div>
         <div className="text-center justify-center flex flex-col items-center px-4 w-10/12 md:w-4/12">
@@ -88,12 +91,13 @@ export default function SubSeccionCursos() {
             curso a la medida, ajustado a tus necesidades y horario.
           </p>
           <div className="h-[100px] flex items-center mt-4">
-            <button
+            <Link
+              href="/about-us"
               aria-label="Más información"
               className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
             >
               MÁS INFORMACIÓN
-            </button>
+            </Link>
           </div>
         </div>
       </div>
