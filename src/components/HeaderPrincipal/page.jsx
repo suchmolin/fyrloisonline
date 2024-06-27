@@ -49,12 +49,12 @@ export default function HeaderPrincipal() {
             </div>
           </Fade>
           <Fade triggerOnce className="px-4 md:px-0">
-            <div className="overflow-hidden rounded-2xl">
+            <div className="relative w-[330px] h-[472px] md:w-[330px] md:h-[472px] lg:w-[430px] lg:h-[572px] overflow-hidden rounded-2xl">
               <Image
                 src="/img/62f6a06787ee5b7f984961cd_foto-header.jpg"
                 alt="header principal"
-                width={430}
-                height={572}
+                layout="fill"
+                objectFit="cover"
                 loading="eager"
               />
             </div>
