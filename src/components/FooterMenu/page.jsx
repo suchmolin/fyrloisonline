@@ -24,7 +24,7 @@ export default function FooterMenu() {
             <Link href="/teacher">Teachers</Link>
           </li>
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
-            Blog
+            <Link href="/blog">Blog</Link>
           </li>
         </ul>
         <ul className="flex flex-col gap-4">

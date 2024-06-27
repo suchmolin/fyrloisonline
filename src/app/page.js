@@ -9,6 +9,7 @@ import SeccionMiss from "@/components/SeccionMiss/page";
 import ComoAprenderas from "@/components/ComoAprenderas/page";
 import LlevaTuProyecto from "@/components/LlevaTuProyecto/page";
 import Footer from "@/components/Footer/page";
+import SeccionEventos from "@/components/SeccionEventos/page";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <SeccionMiss />
       <ComoAprenderas />
       <LlevaTuProyecto />
+      <SeccionEventos />
     </main>
   );
 }

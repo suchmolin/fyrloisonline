@@ -1,6 +1,6 @@
 [
     {
-        "id":"",
+        "id":"language-club",
         "tarjeta":{
             "titulo":"Language Club",
             "descripcion":"Disfruta de uno de los mejores beneficios de ser estudiante de Fyr Lois: en un ambiente conversacional, con actividades diseñadas en torno a los temas que te gustan, para que te diviertas puliendo tus habilidades de comunicación en inglés.",
@@ -8,6 +8,29 @@
             "fecha":"April 12, 2024",
             "hora":"2:00 pm",
             "ubicacion":"Sesiones en vivo vía Zoom"
-        }
+        },
+        "header":{
+            "titulo": "Language Club",
+            "descripcion": "Mejora tus habilidades para expresarte en el idioma, con temas diseñados para tus gustos e intereses, en una actividad diseñada para que aprendas y pases un rato diferente practicando inglés.",
+            "redir":"#",
+            "img":"languageClub.jpg",
+            "fecha":"April 12, 2024",
+            "hora":"2:00 pm",
+            "ubicacion":"Sesiones en vivo vía Zoom"
+        },
+        "contenido":[
+            {
+                "titulo":"¿De qué se trata?",
+                "texto" : ["Si eres alumno de nuestros cursos, todos los viernes tienes la oportunidad de seleccionar un Club, según la temática de tu elección. Podrás practicar con otros alumnos de tu nivel y edad, mientras recibes orientación de un profesor que te brindará las herramientas para potenciar tu capacidad de expresión con fluidez.‍"],
+                "img":"languageClub1.jpg"
+            },
+            {
+                "titulo":"¿De qué se trata?",
+                "ul":["Formal Vs Informal English ","Grammar Tips Club","Music Club ","Pronunciation Tips ","Short Stories Club","Music Club ","Vocabulary Club ","Fluency Tips Club ","Comprehension Tips Club "]
+            },
+            {
+                "texto":"Estos son algunos de los diferentes temas que tenemos disponibles para que complementes tu formación en idiomas con nosotros. Si eres estudiante de Fyr Lois, lo único que debes hacer es hacer clic en el botón \"registrarme\" para indicarte los pasos a seguir y si aún no eres parte de nuestra experiencia de aprendizaje, puedes contactarnos de la misma manera; Te proporcionaremos todas las opciones disponibles para que puedas empezar a mejorar tu dominio del idioma con nosotros."
+            }
+        ]
     }
 ]

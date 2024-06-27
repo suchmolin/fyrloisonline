@@ -9,9 +9,10 @@ export default function ProximosEventos() {
     <>
       {data.map((evento, i) => {
         return (
-          <div
+          <a
+            href={"/events/" + evento.id}
             key={i}
-            className="w-[1000px] min-h-[400px] rounded-xl overflow-hidden shadow-2xl flex flex-col lg:flex-row"
+            className="w-[1000px] min-h-[400px] rounded-xl overflow-hidden shadow-2xl flex flex-col lg:flex-row hover:scale-[0.99] transition-all duration-300"
           >
             <div className="relative w-full lg:w-[600px] min-h-[400px] lg:h-full">
               <Image
@@ -39,19 +40,19 @@ export default function ProximosEventos() {
                 </p>
                 <p className="flex gap-2 w-10/12 md:w-6/12 py-4 text-xl items-center text-[#000b7a]">
                   <span className="text-[#0606f0] font bold">
-                    <FiMapPin />
+                    <FaRegClock />
                   </span>
                   {evento.tarjeta.hora}
                 </p>
                 <p className="flex gap-2 w-10/12 md:w-6/12 py-4 text-xl items-center text-[#000b7a]">
                   <span className="text-[#0606f0] font bold">
-                    <FaRegClock />
+                    <FiMapPin />
                   </span>
                   {evento.tarjeta.ubicacion}
                 </p>
               </div>
             </div>
-          </div>
+          </a>
         );
       })}
     </>
