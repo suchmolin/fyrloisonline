@@ -42,7 +42,7 @@ export default function SubSeccionCursos() {
               aria-label="Más informacion"
               className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
             >
-              MÁS INFORMACIÓN
+              CONÓCENOS
             </Link>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function SubSeccionCursos() {
               aria-label="Más información"
               className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
             >
-              MÁS INFORMACIÓN
+              CONÓCENOS
             </Link>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function SubSeccionCursos() {
               aria-label="Más información"
               className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-100 font-bold "
             >
-              MÁS INFORMACIÓN
+              CONÓCENOS
             </Link>
           </div>
         </div>
