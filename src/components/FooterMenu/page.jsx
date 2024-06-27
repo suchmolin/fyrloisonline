@@ -10,7 +10,7 @@ export default function FooterMenu() {
             <Link href="/">Home</Link>
           </li>
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
-            Conócenos
+            <Link href="/about-us">Conócenos</Link>
           </li>
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
             <Link href="/courses">Cursos</Link>
@@ -18,10 +18,10 @@ export default function FooterMenu() {
         </ul>
         <ul className="flex flex-col gap-4">
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
-            Eventos
+            <Link href="/events">Eventos</Link>
           </li>
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
-            Teachers
+            <Link href="/teacher">Teachers</Link>
           </li>
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
             Blog

@@ -1,4 +1,6 @@
 import Image from "next/image";
+import "./page.css";
+import Link from "next/link";
 
 export default function LlevaTuProyecto() {
   return (
@@ -27,12 +29,13 @@ export default function LlevaTuProyecto() {
             </p>
 
             <div className="flex h-[70px] items-center justify-center lg:justify-start mt-5">
-              <button
+              <Link
+                href="/courses"
                 aria-label="Acerca de nosotros"
                 className=" py-4 px-7 bg-[#90d400] hover:bg-transparent hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#90d400] hover:border-[#fff] transition-all duration-200 font-bold z-20"
               >
                 Comenzar
-              </button>
+              </Link>
             </div>
           </div>
           <div className="mt-10 lg:mt-0">

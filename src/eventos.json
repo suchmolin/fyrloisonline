@@ -1,0 +1,13 @@
+[
+    {
+        "id":"",
+        "tarjeta":{
+            "titulo":"Language Club",
+            "descripcion":"Disfruta de uno de los mejores beneficios de ser estudiante de Fyr Lois: en un ambiente conversacional, con actividades diseñadas en torno a los temas que te gustan, para que te diviertas puliendo tus habilidades de comunicación en inglés.",
+            "img":"languageClub.jpg",
+            "fecha":"April 12, 2024",
+            "hora":"2:00 pm",
+            "ubicacion":"Sesiones en vivo vía Zoom"
+        }
+    }
+]

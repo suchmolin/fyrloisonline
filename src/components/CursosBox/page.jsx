@@ -1,14 +1,17 @@
 import { cursosInfo } from "@/cursosInfo";
 import Image from "next/image";
 
-export default function CursosBox() {
+export default function CursosBox(props) {
+  const { box } = props;
   return (
-    <div className="w-full flex gap-6 flex-wrap lg:flex-nowrap justify-center lg:justify-start">
+    <div
+      className={`w-full flex gap-6 justify-center lg:justify-start flex-wrap ${box === "lg" ? "lg:flex-nowrap" : ""}`}
+    >
       {cursosInfo.map((curso, index) => (
         <a
           key={index}
           href={curso.redirect}
-          className="flex flex-col justify-between min-h-[400px] w-11/12 sm:w-8/12 md:w-5/12 lg:w-3/12 rounded-lg shadow-2xl overflow-hidden hover:scale-[0.98] transition-all duration-300"
+          className={`flex flex-col justify-between min-h-[400px]  rounded-lg shadow-2xl overflow-hidden hover:scale-[0.98] transition-all duration-300 ${box === "lg" ? "w-11/12 sm:w-8/12 md:w-5/12 lg:w-3/12" : "w-full sm:w-8/12 md:w-5/12"}`}
         >
           <div className="relative w-full min-h-[300px]">
             <Image

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { IoCartOutline } from "react-icons/io5";
 import { AiOutlineMenu } from "react-icons/ai";
 import SubMenuNav from "../SubMenuNav/page";
+import Link from "next/link";
 
 export default function MenuHeader() {
   return (
@@ -27,12 +28,13 @@ export default function MenuHeader() {
               <IoCartOutline className="text-3xl text-[#000b7a] scale-x-[-1] cursor-pointer" />
             </div>
             <div className="flex items-center h-full">
-              <button
+              <Link
+                href="/courses"
                 aria-label="Nuestros cursos"
                 className="py-2 px-4 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white transition-all duration-500 "
               >
                 Cursos
-              </button>
+              </Link>
             </div>
           </div>
         </div>

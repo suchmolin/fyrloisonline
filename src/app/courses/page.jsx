@@ -13,7 +13,7 @@ export default function CoursesPage() {
         <h3 id="coursesTitle" className="text-[#000b7a] text-4xl py-10">
           Conoce nuestros cursos
         </h3>
-        <CursosBox />
+        <CursosBox box="lg" />
       </div>
       <LlevaTuProyecto />
       <SectionAprender />

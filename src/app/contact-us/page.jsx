@@ -29,7 +29,7 @@ export default function ContactUsPage() {
     <div className="w-full flex flex-col items-center">
       <FormContactUs />
       <MasInfoContactUs />
-      <div className="w-9/12 py-20">
+      <div className="w-11/12 md:w-9/12 py-20">
         <h3 className="text-4xl text-[#000b7a] py-4 text-center">
           Preguntas frecuentes
         </h3>

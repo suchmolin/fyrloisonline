@@ -26,7 +26,7 @@ export default function SeccionCursos() {
           </div>
         </div>
         <div className="w-full py-10 flex justify-center">
-          <CursosBox />
+          <CursosBox box="lg" />
         </div>
       </div>
     </Slide>

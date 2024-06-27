@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function FormContactUs() {
   return (
-    <div className="w-10/12 rounded-xl shadow-2xl mt-10 flex flex-col justify-center items-center">
-      <div className="w-10/12 flex gap-5 justify-center py-10 border-gray-500 border-b-[1px]">
+    <div className="w-11/12 md:w-10/12 rounded-xl shadow-2xl mt-10 flex flex-col justify-center items-center">
+      <div className="w-10/12  flex flex-col md:flex-row gap-5 justify-center py-10 border-gray-500 border-b-[1px]">
         <div className="w-8/12">
           <h2 className="text-[#000b7a] text-5xl py-4">Contáctanos</h2>
           <p className="text-gray-500">
@@ -21,11 +21,11 @@ export default function FormContactUs() {
           />
         </div>
       </div>
-      <div className="w-10/12 py-10 flex flex-wrap gap-5 justify-center">
-        <div className="w-5/12">
+      <div className="w-11/12 md:w-10/12  py-10 flex flex-wrap gap-5 justify-center">
+        <div className="w-10/12 md:w-5/12">
           <FloatingLabel variant="filled" label="Nombre y Apellido" />
         </div>
-        <div className="w-5/12">
+        <div className="w-10/12 md:w-5/12">
           <FloatingLabel variant="filled" label="Email" />
         </div>
         <div className="w-10/12">

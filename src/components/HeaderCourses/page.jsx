@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
 export default function HeaderCourses() {
@@ -30,12 +31,17 @@ export default function HeaderCourses() {
                 edad, intereses y agenda.
               </h2>
               <div className="flex gap-10 h-[60px] items-center justify-center md:justify-start">
-                <button
-                  aria-label="TConoce nuestros cursos"
-                  className=" py-4 px-7 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-white transition-all duration-500 font-bold text-xs md:text-base"
+                <Link
+                  href="#coursesTitle"
+                  aria-label="Conoce nuestros cursos"
+                  className=" py-4 px-7
+                  bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md
+                  text-bold text-white transition-all duration-500 font-bold
+                  text-xs md:text-base"
                 >
+                  {" "}
                   CONOCE MÁS
-                </button>
+                </Link>
               </div>
             </div>
           </Fade>

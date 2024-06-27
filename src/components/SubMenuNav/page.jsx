@@ -12,7 +12,7 @@ export default function SubMenuNav() {
       </li>
 
       <li>
-        <a href="#">Conócenos</a>
+        <Link href="/about-us">Conócenos</Link>
       </li>
 
       <li>
