@@ -12,7 +12,7 @@ export default function MenuHeader() {
           <div className="flex gap-10 items-center">
             <a
               href="/"
-              className="relative h-[35px] md:h-[65px] w-[100px] md:w-[180px]"
+              className="relative h-[35px] md:h-[65px] w-[100px] md:w-[180px] overflow-hidden"
             >
               <Image
                 src="/img/1.png"
