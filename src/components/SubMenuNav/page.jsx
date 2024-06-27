@@ -12,7 +12,9 @@ export default function SubMenuNav() {
       </li>
 
       <li>
-        <Link href="/about-us">Conócenos</Link>
+        <Link aria-label="acerca de nosotros" href="/about-us">
+          Conócenos
+        </Link>
       </li>
 
       <li>
@@ -20,7 +22,12 @@ export default function SubMenuNav() {
       </li>
 
       <li>
-        <a href="#">Test</a>
+        <a
+          target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdiiOaso_9idAARO2Zd8tL8K9qGM3DSyTvZD8bW13GR0VjnZg/viewform"
+        >
+          Test
+        </a>
       </li>
     </ul>
   );

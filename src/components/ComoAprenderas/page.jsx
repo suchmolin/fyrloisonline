@@ -11,7 +11,7 @@ export default function ComoAprenderas() {
           </h3>
           <div className="h-[70px] flex items-center">
             <Link
-              href="/about-us"
+              href="/courses"
               aria-label="Conoce nuestros cursos"
               className=" py-4 px-7 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white  transition-all duration-500 font-bold mt-5 md:mt-0"
             >

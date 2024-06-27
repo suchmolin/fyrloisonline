@@ -10,7 +10,9 @@ export default function FooterMenu() {
             <Link href="/">Home</Link>
           </li>
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
-            <Link href="/about-us">Conócenos</Link>
+            <Link aria-label="acerca de nosotros" href="/about-us">
+              Conócenos
+            </Link>
           </li>
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
             <Link href="/courses">Cursos</Link>
