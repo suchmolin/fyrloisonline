@@ -24,9 +24,9 @@ export default function ProximosEventos() {
             </div>
             <div className="w-fit p-7">
               <div className=" border-b-2 border-gray-300 pb-4">
-                <h4 className="text-[#000b7a] text-2xl font-bold py-2 px-5">
+                <h5 className="text-[#000b7a] text-2xl font-bold py-2 px-5">
                   {evento.tarjeta.titulo}
-                </h4>
+                </h5>
                 <p className="text-gray-500 text-lg py-2 px-1 md:px-5">
                   {evento.tarjeta.descripcion}
                 </p>
