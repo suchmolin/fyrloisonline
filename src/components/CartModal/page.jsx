@@ -26,11 +26,9 @@ export default function CartModal() {
         return acumulador + item.cantidad * item.precio;
       }, 0);
 
-      setSubTotal(total);
-      console.log(total);
+      setSubTotal(total || 0);
     } else {
       setSubTotal(0);
-      console.log(total);
     }
   }, [cartInfo]);
 
