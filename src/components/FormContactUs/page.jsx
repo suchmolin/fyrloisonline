@@ -1,9 +1,28 @@
+"use client";
 import { FloatingLabel, Label, Select } from "flowbite-react";
 import Image from "next/image";
 
 export default function FormContactUs() {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    console.log(response);
+  };
+
   return (
-    <div className="w-11/12 md:w-10/12 rounded-xl shadow-2xl mt-10 flex flex-col justify-center items-center">
+    <form
+      onSubmit={(e) => handleSubmit(e)}
+      className="w-11/12 md:w-10/12 rounded-xl shadow-2xl mt-10 flex flex-col justify-center items-center"
+    >
       <div className="w-10/12  flex flex-col md:flex-row gap-5 justify-center py-10 border-gray-500 border-b-[1px]">
         <div className="w-8/12">
           <h2 className="text-[#000b7a] text-5xl py-4">Contáctanos</h2>
@@ -23,13 +42,21 @@ export default function FormContactUs() {
       </div>
       <div className="w-11/12 md:w-10/12  py-10 flex flex-wrap gap-5 justify-center">
         <div className="w-10/12 md:w-5/12">
-          <FloatingLabel variant="filled" label="Nombre y Apellido" />
+          <FloatingLabel
+            variant="filled"
+            label="Nombre y Apellido"
+            name="fullname"
+          />
         </div>
         <div className="w-10/12 md:w-5/12">
-          <FloatingLabel variant="filled" label="Email" />
+          <FloatingLabel variant="filled" label="Email" name="email" />
         </div>
         <div className="w-10/12">
-          <FloatingLabel variant="filled" label="Numero Telefónico" />
+          <FloatingLabel
+            variant="filled"
+            label="Numero Telefónico"
+            name="tellphone"
+          />
         </div>
         <div className="w-10/12">
           <div className="mb-2 block">
@@ -39,7 +66,7 @@ export default function FormContactUs() {
               className="text-xl text-[#000b7a]"
             />
           </div>
-          <Select id="porqueAprender" required>
+          <Select id="porqueAprender" required name="porqueAprender">
             <option>Seleccione</option>
             <option>Social</option>
             <option>Personal</option>
@@ -55,7 +82,7 @@ export default function FormContactUs() {
               className="text-xl text-[#000b7a]"
             />
           </div>
-          <Select id="comoNosConociste" required>
+          <Select id="comoNosConociste" required name="comoNosConociste">
             <option>Seleccione</option>
             <option>Un amigo/Familiar</option>
             <option>Facebook</option>
@@ -72,7 +99,7 @@ export default function FormContactUs() {
               className="text-xl text-[#000b7a]"
             />
           </div>
-          <Select id="hasEstudiadoAntes" required>
+          <Select id="hasEstudiadoAntes" required name="hasEstudiadoAntes">
             <option>Seleccione</option>
             <option>si</option>
             <option>no</option>
@@ -80,6 +107,7 @@ export default function FormContactUs() {
         </div>
         <div className="w-10/12 h-[70px] flex items-center">
           <button
+            type="submit"
             aria-label="TConoce nuestros cursos"
             className=" py-4 px-7 bg-[#ffa101] hover:bg-[#000b7a] hover:mb-1 rounded-md text-bold text-white transition-all duration-500 font-bold text-xs md:text-base"
           >
@@ -87,6 +115,6 @@ export default function FormContactUs() {
           </button>
         </div>
       </div>
-    </div>
+    </form>
   );
 }
