@@ -14,7 +14,7 @@ export default function MenuHeader() {
 
   useEffect(() => {
     const cartInfo = JSON.parse(localStorage.getItem("cartInfo") || "[]");
-    const totalCantidad = cartInfo.reduce((acumulador, item) => {
+    const totalCantidad = cartInfo?.reduce((acumulador, item) => {
       return acumulador + (item.cantidad || 0);
     }, 0);
 

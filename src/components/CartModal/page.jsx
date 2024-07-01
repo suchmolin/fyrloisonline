@@ -17,13 +17,22 @@ export default function CartModal() {
   useEffect(() => {
     const cartInformacion = JSON.parse(localStorage.getItem("cartInfo"));
     setCartInfo(cartInformacion);
+  }, []);
 
-    const total = cartInformacion.reduce((acumulador, item) => {
-      return acumulador + item.cantidad * item.precio;
-    }, 0);
+  useEffect(() => {
+    const cartInformacion = JSON.parse(localStorage.getItem("cartInfo"));
+    if (cartInformacion) {
+      const total = cartInformacion.reduce((acumulador, item) => {
+        return acumulador + item.cantidad * item.precio;
+      }, 0);
 
-    setSubTotal(total);
-  }, [cartInfo, isOpen]);
+      setSubTotal(total);
+      console.log(total);
+    } else {
+      setSubTotal(0);
+      console.log(total);
+    }
+  }, [cartInfo]);
 
   const deleteOnCart = (id) => {
     const cartInfo = JSON.parse(localStorage.getItem("cartInfo"));
@@ -31,7 +40,7 @@ export default function CartModal() {
     cartInfo.splice(index, 1);
     localStorage.setItem("cartInfo", JSON.stringify(cartInfo));
     setCartInfo(cartInfo);
-    const totalCantidad = cartInfo.reduce((acumulador, item) => {
+    const totalCantidad = cartInfo?.reduce((acumulador, item) => {
       return acumulador + (item.cantidad || 0);
     }, 0);
     setCantCart(totalCantidad);
@@ -43,7 +52,7 @@ export default function CartModal() {
     cartInfo[index].cantidad = Number(e.target.value);
     localStorage.setItem("cartInfo", JSON.stringify(cartInfo));
     setCartInfo(cartInfo);
-    const totalCantidad = cartInfo.reduce((acumulador, item) => {
+    const totalCantidad = cartInfo?.reduce((acumulador, item) => {
       return acumulador + (item.cantidad || 0);
     }, 0);
     setCantCart(totalCantidad);
@@ -54,7 +63,7 @@ export default function CartModal() {
       <Drawer open={isOpen} onClose={handleClose} position="right">
         <Drawer.Header title="Your Cart" />
         <Drawer.Items>
-          {cartInfo.map((item, i) => {
+          {cartInfo?.map((item, i) => {
             const curso = cursosInfo.find((curso) => curso.id === item.id);
             return (
               <div
@@ -79,8 +88,15 @@ export default function CartModal() {
                       onChange={(e) => actualizarCantidad(e, curso.id)}
                       type="number"
                       max={10}
+                      min={1}
                       className="rounded-sm w-[70px] h-[30px]"
                       defaultValue={item.cantidad}
+                      onKeyDown={(e) => {
+                        // Permite solo el uso de las flechas arriba y abajo
+                        if (e.key !== "ArrowUp" && e.key !== "ArrowDown") {
+                          e.preventDefault();
+                        }
+                      }}
                     />
                     <button
                       onClick={() => deleteOnCart(curso.id)}
@@ -93,7 +109,7 @@ export default function CartModal() {
               </div>
             );
           })}
-          {cartInfo.lenght > 0 ? (
+          {cartInfo?.length > 0 ? (
             <div>
               <p className="text-[#000b7a] text-lg font-bold p-2">
                 Subtotal: ${subTotal}.00
