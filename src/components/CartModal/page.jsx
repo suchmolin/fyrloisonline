@@ -82,7 +82,7 @@ export default function CartModal() {
                   <h3 className="text-[#000b7a] font-bold text-lg">
                     {curso.title}
                   </h3>
-                  <p className="text-gray-500 text-xl">${curso.price}.00</p>
+                  <p className="text-gray-500 text-xl">$ {curso.price}.00</p>
                   <div className="flex gap-4">
                     <input
                       onChange={(e) => actualizarCantidad(e, curso.id)}
