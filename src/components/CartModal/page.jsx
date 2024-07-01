@@ -20,16 +20,19 @@ export default function CartModal() {
   }, []);
 
   useEffect(() => {
-    const cartInformacion = JSON.parse(localStorage.getItem("cartInfo"));
-    if (cartInformacion) {
-      const total = cartInformacion.reduce((acumulador, item) => {
-        return acumulador + item.cantidad * item.precio;
-      }, 0);
+    const sumarTotal = async () => {
+      const cartInformacion = JSON.parse(localStorage.getItem("cartInfo"));
+      if (cartInformacion) {
+        const total = await cartInformacion.reduce((acumulador, item) => {
+          return acumulador + item.cantidad * item.precio;
+        }, 0);
 
-      setSubTotal(total || 0);
-    } else {
-      setSubTotal(0);
-    }
+        setSubTotal(total || 0);
+      } else {
+        setSubTotal(0);
+      }
+    };
+    sumarTotal();
   }, [cartInfo]);
 
   const deleteOnCart = (id) => {
