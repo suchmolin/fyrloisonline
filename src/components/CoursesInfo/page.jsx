@@ -50,13 +50,13 @@ export default function CoursesInfo(props) {
                     </p>
                   ))}
                 {item.img && (
-                  <div className="w-full flex justify-center">
+                  <div key={"img" + i} className="w-full flex justify-center">
                     <Image
                       key={"img" + i}
                       width={800}
                       height={300}
                       src={`/img/${item.img}`}
-                      alt={item.titulo}
+                      alt={item.titulo || "img-" + i}
                       className="rounded-2xl"
                     />
                   </div>
@@ -65,7 +65,7 @@ export default function CoursesInfo(props) {
             ))}
           {selectedTab === "Contenido del Curso" &&
             data.contenidoDelCurso.map((item, i) => (
-              <>
+              <div key={"courseCont" + i}>
                 {item.titulo && (
                   <h2
                     key={"titulo" + i}
@@ -84,33 +84,35 @@ export default function CoursesInfo(props) {
                     ))}
                   </ul>
                 )}
-              </>
+              </div>
             ))}
           {selectedTab === "Resenas" &&
             data.resenas.map((item, i) => (
-              <>
-                <h2 className="text-[#000b7a] text-3xl font-bold py-5">
+              <div key={"resenas" + i}>
+                <h2
+                  key={"h2rev" + i}
+                  className="text-[#000b7a] text-3xl font-bold py-5"
+                >
                   REVIEWS
                 </h2>
-                <div key={i} className="border-b-2 border-gray-200">
+                <div key={"img2" + i} className="border-b-2 border-gray-200">
                   <Image
-                    key={"img" + i}
                     src={`/img/5stars.svg`}
-                    alt={item.name}
+                    alt={item.name || "img2-" + i}
                     width={200}
                     height={100}
                   />
-                  <p key={"name" + i} className="text-gray-500 text-xl pt-5">
+                  <p key={"name2" + i} className="text-gray-500 text-xl pt-5">
                     {item.texto}
                   </p>
                   <h4
-                    key={"texto" + i}
+                    key={"texto2" + i}
                     className="text-[#000b7a] font-bold text-2xl py-5"
                   >
                     {item.nombre}
                   </h4>
                 </div>
-              </>
+              </div>
             ))}
         </div>
       </div>

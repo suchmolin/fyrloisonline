@@ -27,7 +27,7 @@ export default function HeaderSingleCourse(props) {
               <p className="flex flex-col sm:flex-row items-center gap-2 h-[70px] sm:h-[25px] w-[230px] text-gray-500 ">
                 <Image
                   src="/img/course2.png"
-                  alt="course1"
+                  alt="course2"
                   width={23}
                   height={10}
                 />
@@ -38,7 +38,7 @@ export default function HeaderSingleCourse(props) {
               <p className="flex flex-col sm:flex-row items-center gap-2 h-[70px] sm:h-[25px] w-[230px] text-gray-500">
                 <Image
                   src="/img/course3.png"
-                  alt="course1"
+                  alt="course3"
                   width={23}
                   height={10}
                 />
@@ -47,7 +47,7 @@ export default function HeaderSingleCourse(props) {
               <p className="flex flex-col sm:flex-row items-center gap-2 h-[70px] sm:h-[25px] w-[230px] text-gray-500 ">
                 <Image
                   src="/img/course4.png"
-                  alt="course1"
+                  alt="course4"
                   width={23}
                   height={10}
                 />
@@ -76,7 +76,7 @@ export default function HeaderSingleCourse(props) {
 
       <Fade
         triggerOnce
-        className="hidden lg:block pt-36 h-[1600px]  absolute top-0 right-10"
+        className="hidden lg:block mt-36 h-[1600px]  absolute top-0 right-10"
       >
         <div className="relative h-full">
           <TarjetaCompraCurso data={data} />

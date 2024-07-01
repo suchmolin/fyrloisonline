@@ -8,7 +8,7 @@ import CursosBox from "@/components/CursosBox/page";
 export default function Profesor({ params }) {
   const { profesor } = params;
   const item = data.find((item) => item.id === profesor);
-  console.log(`/img/${item.img}`);
+
   const [selected, setSelected] = useState("acercaDeMi");
 
   return (

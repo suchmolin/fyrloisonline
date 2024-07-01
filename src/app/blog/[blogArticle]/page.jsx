@@ -4,7 +4,7 @@ import BlogUltimosArticulos from "@/components/BlogUltimosArticulos/page";
 export default function ArticulosBlog({ params }) {
   const { blogArticle } = params;
   const blog = data.find((item) => item.id === blogArticle);
-  console.log(blog.tarjeta);
+
   return (
     <div className="w-full flex flex-col items-center py-10">
       <div className="relative w-10/12 h-[300px] sm:h-[600px] rounded-2xl overflow-hidden">

@@ -1,13 +1,29 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+"use client";
 import Image from "next/image";
 import { IoCartOutline } from "react-icons/io5";
-import { AiOutlineMenu } from "react-icons/ai";
 import SubMenuNav from "../SubMenuNav/page";
 import Link from "next/link";
+import CartModal from "../CartModal/page";
+import { useContext, useEffect } from "react";
+import { OpenModalContext } from "@/context/openModal";
 
 export default function MenuHeader() {
+  const { isOpen, setIsOpen, cantCart, setCantCart } =
+    useContext(OpenModalContext);
+
+  useEffect(() => {
+    const cartInfo = JSON.parse(localStorage.getItem("cartInfo") || "[]");
+    const totalCantidad = cartInfo.reduce((acumulador, item) => {
+      return acumulador + (item.cantidad || 0);
+    }, 0);
+
+    setCantCart(totalCantidad);
+  }, []);
+
   return (
     <>
-      <nav className="relative flex justify-center h-[90px] border-b-2 border-[#000b7a] items-center">
+      <nav className="relative flex justify-center h-[90px] border-b-2 border-[#000b7a] items-center z-90">
         <div className="w-10/12 flex justify-between items-center">
           <div className="flex gap-10 items-center">
             <a href="/" className="h-full w-[100px] md:w-[180px]">
@@ -24,8 +40,14 @@ export default function MenuHeader() {
             </div>
           </div>
           <div className="flex gap-3 md:gap-10 lg:gap-20 items-center justify-center">
-            <div className="flex h-full items-center">
+            <div
+              onClick={() => setIsOpen(!isOpen)}
+              className="flex h-full items-center cursor-pointer"
+            >
               <IoCartOutline className="text-3xl text-[#000b7a] scale-x-[-1] cursor-pointer" />
+              <div className="w-5 h-5 bg-[#000b7a] text-xs text-white flex items-center justify-center rounded-full">
+                {cantCart}
+              </div>
             </div>
             <div className="flex items-center h-full">
               <Link
@@ -45,6 +67,7 @@ export default function MenuHeader() {
       >
         <SubMenuNav />
       </div>
+      <CartModal />
     </>
   );
 }

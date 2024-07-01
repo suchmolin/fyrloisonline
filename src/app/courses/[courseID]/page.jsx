@@ -10,7 +10,7 @@ export default function CoursePage({ params }) {
     <>
       <HeaderSingleCourse data={course} />
       <CoursesInfo data={course} />
-      <div className="flex lg:hidden w-full justify-center">
+      <div className="flex lg:hidden w-full justify-center z-10">
         <TarjetaCompraCurso data={course} />
       </div>
       <div className="w-full flex flex-col items-center">

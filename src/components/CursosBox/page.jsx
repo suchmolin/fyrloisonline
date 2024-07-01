@@ -18,7 +18,7 @@ export default function CursosBox(props) {
               layout="fill"
               objectFit="cover"
               src={`/img/${curso.img}`}
-              alt={curso.title}
+              alt={curso.title || "curso" + index}
             />
           </div>
           <div className="mx-5 py-3 ">
