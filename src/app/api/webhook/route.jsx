@@ -34,7 +34,7 @@ export async function POST(request) {
       const total = session.amount_total / 100;
       const idTransaccion = session.payment_intent;
 
-      await resend.emails.send({
+      const respuesta = await resend.emails.send({
         from: "onboarding@resend.dev",
         to: correoCliente,
         subject: "PAGO ONLINE Fyr Lois Online",
@@ -50,6 +50,7 @@ export async function POST(request) {
                   return `
                         <div>
                             <h3>${curso.title}</h3>
+                            <img src="https://fyrlois-us.vercel.app/_next/image?url=%2Fimg%2F${curso.img}&w=1920&q=75" />
                             <p>precio: ${curso.price}</p>
                             <p>cantidad: ${producto.cantidad}</p>
                         </div>
@@ -60,7 +61,7 @@ export async function POST(request) {
                 `,
       });
 
-      //enviar correos
+      console.log(respuesta);
 
       break;
     default:
