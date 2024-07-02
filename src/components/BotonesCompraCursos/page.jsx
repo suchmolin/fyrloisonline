@@ -7,7 +7,7 @@ export default function BotonesCompraCursos(props) {
   const { setCantCart, setCartInfo, setIsOpen } = useContext(OpenModalContext);
 
   const addCart = (id) => {
-    const cartInfo = JSON.parse(localStorage.getItem("cartInfo"));
+    let cartInfo = JSON.parse(localStorage.getItem("cartInfo"));
 
     if (cartInfo) {
       const index = cartInfo.findIndex((item) => item.id === id);
@@ -19,7 +19,11 @@ export default function BotonesCompraCursos(props) {
         localStorage.setItem("cartInfo", JSON.stringify(cartInfo));
       }
     } else {
-      localStorage.setItem("cartInfo", JSON.stringify([{ id, cantidad: 1 }]));
+      localStorage.setItem(
+        "cartInfo",
+        JSON.stringify([{ id, cantidad: 1, precio }])
+      );
+      cartInfo = [{ id, cantidad: 1, precio }];
     }
     setCantCart((prev) => prev + 1);
 
