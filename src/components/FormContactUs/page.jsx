@@ -15,7 +15,7 @@ export default function FormContactUs() {
       },
       body: JSON.stringify(data),
     });
-    console.log(response);
+    console.log(await response.json());
   };
 
   return (
