@@ -56,16 +56,18 @@ export default function FormContactUs() {
             variant="filled"
             label="Nombre y Apellido"
             name="fullname"
+            required
           />
         </div>
         <div className="w-10/12 md:w-5/12">
-          <FloatingLabel variant="filled" label="Email" name="email" />
+          <FloatingLabel variant="filled" label="Email" name="email" required />
         </div>
         <div className="w-10/12">
           <FloatingLabel
             variant="filled"
             label="Numero Telefónico"
             name="tellphone"
+            required
           />
         </div>
         <div className="w-10/12">
