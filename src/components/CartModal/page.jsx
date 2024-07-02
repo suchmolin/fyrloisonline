@@ -7,6 +7,7 @@ import { cursosInfo } from "@/cursosInfo";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Image from "next/image";
 import Link from "next/link";
+import { handleCheckout } from "@/checkoutCart";
 
 export default function CartModal() {
   const { isOpen, setIsOpen, setCantCart, cartInfo, setCartInfo } =
@@ -117,7 +118,7 @@ export default function CartModal() {
               </p>
               <Button
                 className="w-full bg-[#ffa101] hover:bg-[#000b7a] text-white"
-                onClick={() => continueToCheckout()}
+                onClick={() => handleCheckout(cartInfo)}
               >
                 Checkout
               </Button>
