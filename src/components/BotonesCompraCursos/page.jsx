@@ -6,16 +6,13 @@ export default function BotonesCompraCursos(props) {
   const { id, precio } = props;
   const { setCantCart, setCartInfo, setIsOpen } = useContext(OpenModalContext);
 
-  const addCart = (id) => {
-    let cartInfo = JSON.parse(localStorage.getItem("cartInfo"));
+  const addCart = async (id) => {
+    let cartInfo = await JSON.parse(localStorage.getItem("cartInfo"));
 
     if (cartInfo) {
       const index = cartInfo.findIndex((item) => item.id === id);
       if (index === -1) {
         cartInfo.push({ id, cantidad: 1, precio });
-        localStorage.setItem("cartInfo", JSON.stringify(cartInfo));
-      } else {
-        cartInfo[index].cantidad += 1;
         localStorage.setItem("cartInfo", JSON.stringify(cartInfo));
       }
     } else {

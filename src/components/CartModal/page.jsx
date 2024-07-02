@@ -65,6 +65,7 @@ export default function CartModal() {
       <Drawer open={isOpen} onClose={handleClose} position="right">
         <Drawer.Header title="Your Cart" />
         <Drawer.Items>
+          {console.log(cartInfo)}
           {cartInfo?.map((item, i) => {
             const curso = cursosInfo.find((curso) => curso.id === item.id);
             return (
