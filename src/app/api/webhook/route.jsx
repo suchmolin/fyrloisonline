@@ -50,7 +50,7 @@ export async function POST(request) {
                   return `
                         <div>
                             <h3>${curso.title}</h3>
-                            <img src="https://fyrlois-us.vercel.app/_next/image?url=%2Fimg%2F${curso.img}&w=1920&q=75" />
+                            <img width="100px" height="auto" src="https://fyrlois-us.vercel.app/_next/image?url=%2Fimg%2F${curso.img}&w=1920&q=75" />
                             <p>precio: ${curso.price}</p>
                             <p>cantidad: ${producto.cantidad}</p>
                         </div>
