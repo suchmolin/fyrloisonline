@@ -3,8 +3,11 @@ import { FloatingLabel, Label, Select } from "flowbite-react";
 import Image from "next/image";
 
 export default function FormContactUs() {
+  const [sended, setSended] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSended(false);
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
@@ -15,7 +18,13 @@ export default function FormContactUs() {
       },
       body: JSON.stringify(data),
     });
-    console.log(await response.json());
+    const responseJson = await response.json();
+    if (responseJson.message === "Email sent") {
+      setSended(true);
+    } else {
+      console.log("Error al enviar el correo");
+    }
+    e.target.reset();
   };
 
   return (
@@ -114,6 +123,12 @@ export default function FormContactUs() {
             Enviar Mensaje
           </button>
         </div>
+        {sended && (
+          <p className="text-md text-[#000b7a] py-2">
+            Correo Enviado Exitosamente, muy pronto un agente autorizado se
+            contactara al telefono y correo proporcionado
+          </p>
+        )}
       </div>
     </form>
   );
