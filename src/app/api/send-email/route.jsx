@@ -8,8 +8,8 @@ export async function POST(req, res) {
   console.log(data);
 
   const respuesta = await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "suchmolin11@gmail.com",
+    from: "no-reply@fyrlois.us",
+    to: "info@fyrlois.us",
     subject: "CONTACT-US from Fyr Lois Academy Online",
     html: `
         <h1>Hola, mi nombre es: ${data.fullname}</h1>

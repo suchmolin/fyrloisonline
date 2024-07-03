@@ -35,7 +35,7 @@ export async function POST(request) {
       const idTransaccion = session.payment_intent;
 
       const respuesta = await resend.emails.send({
-        from: "onboarding@resend.dev",
+        from: "no-reply@fyrlois.us",
         to: correoCliente,
         subject: "PAGO ONLINE Fyr Lois Online",
         html: `
