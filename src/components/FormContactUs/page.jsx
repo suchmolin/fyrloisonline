@@ -6,31 +6,6 @@ import { useState } from "react";
 export default function FormContactUs() {
   const [sended, setSended] = useState(false);
 
-  const handleSubmit2 = async (e) => {
-    e.preventDefault();
-    setSended(false);
-    const formData = new FormData(e.target);
-    let keyValuePairs = [];
-    for (let pair of formData.entries()) {
-      keyValuePairs.push(pair[0] + "=" + pair[1]);
-    }
-    let formDataString = keyValuePairs.join("&");
-
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbxQ9rD6L_A8XhtkkXt6F2vHz2MO8PJGPIpQnGcOoUK9XqMFkEoGi9xVm62NUuQCF3QR3g/exec",
-      {
-        redirect: "follow",
-        method: "POST",
-        headers: {
-          "content-type": "application/x-www-form-urlencoded",
-        },
-        body: formDataString,
-      }
-    );
-    const responseJson = await response.json();
-    console.log(responseJson);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSended(false);
@@ -55,7 +30,7 @@ export default function FormContactUs() {
 
   return (
     <form
-      onSubmit={(e) => handleSubmit2(e)}
+      onSubmit={(e) => handleSubmit(e)}
       className="w-11/12 md:w-10/12 rounded-xl shadow-2xl mt-10 flex flex-col justify-center items-center"
     >
       <div className="w-10/12  flex flex-col md:flex-row gap-5 justify-center py-10 border-gray-500 border-b-[1px]">
