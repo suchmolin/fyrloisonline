@@ -60,8 +60,32 @@ export async function POST(request) {
                 <h3>Total: ${total}</h3>
                 `,
       });
-
-      console.log(respuesta);
+      const respuesta2 = await resend.emails.send({
+        from: "no-reply@fyrlois.us",
+        to: "info@fyrlois.us",
+        subject: "PAGO ONLINE Fyr Lois Online",
+        html: `
+                <h1>Cliente: ${nombreCliente}</h1>
+                <p>se ha registrado un pago con identificador: ${idTransaccion}</p>
+                <p>Correo Electronico: ${correoCliente}</p>
+                <p>informacion del pago:</p>
+                ${productos.map((producto) => {
+                  const curso = cursosInfo.find(
+                    (curso) => curso.id === producto.id
+                  );
+                  return `
+                        <div>
+                            <h3>${curso.title}</h3>
+                            <img width="100px" height="auto" src="https://fyrlois-us.vercel.app/_next/image?url=%2Fimg%2F${curso.img}&w=1920&q=75" />
+                            <p>precio: ${curso.price}</p>
+                            <p>cantidad: ${producto.cantidad}</p>
+                        </div>
+                    `;
+                })}
+                <hr />
+                <h3>Total: ${total}</h3>
+                `,
+      });
 
       break;
     default:
