@@ -22,7 +22,7 @@ export default function FormContactUs() {
         redirect: "follow",
         method: "POST",
         headers: {
-          "content-type": "text/plain; charset=UTF-8",
+          "content-type": "application/x-www-form-urlencoded",
         },
         body: formDataString,
       }
