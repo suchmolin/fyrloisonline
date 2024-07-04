@@ -10,6 +10,7 @@ import ComoAprenderas from "@/components/ComoAprenderas/page";
 import LlevaTuProyecto from "@/components/LlevaTuProyecto/page";
 import Footer from "@/components/Footer/page";
 import SeccionEventos from "@/components/SeccionEventos/page";
+import SeccionBlog from "@/components/SeccionBlog/page";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <SubSeccionCursos />
       <SeccionMiss />
       <ComoAprenderas />
+      <SeccionBlog />
       <LlevaTuProyecto />
       <SeccionEventos />
     </main>

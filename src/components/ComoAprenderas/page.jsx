@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function ComoAprenderas() {
   return (
-    <div className="w-full flex justify-center py-20">
-      <div className="w-10/12">
+    <div className="w-full flex justify-center ">
+      <div className="w-10/12 border-b-2 border-gray-200 py-20">
         <div className="flex flex-col md:flex-row justify-between items-center py-10">
           <h3 className="text-3xl md:text-4xl font-bold text-[#000b7a]">
             ¿Cómo aprenderás inglés con nosotros?
