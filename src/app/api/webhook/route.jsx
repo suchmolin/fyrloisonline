@@ -33,7 +33,7 @@ export async function POST(request) {
       const correoCliente = session.customer_details.email
       const total = session.amount_total / 100
       const idTransaccion = session.payment_intent
-      console.log(session.custom_fields[0], session.custom_fields[0].numeric)
+      console.log(session.custom_fields[0].numeric.value)
       /*
       const respuesta = await resend.emails.send({
         from: "no-reply@fyrlois.us",
