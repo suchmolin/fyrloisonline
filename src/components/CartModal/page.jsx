@@ -1,73 +1,72 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-"use client";
-import { Button, Drawer } from "flowbite-react";
-import { useContext, useEffect, useState } from "react";
-import { OpenModalContext } from "@/context/openModal";
-import { cursosInfo } from "@/cursosInfo";
-import { RiDeleteBin6Line } from "react-icons/ri";
-import Image from "next/image";
-import Link from "next/link";
-import { handleCheckout } from "@/checkoutCart";
+"use client"
+import { Button, Drawer } from "flowbite-react"
+import { useContext, useEffect, useState } from "react"
+import { OpenModalContext } from "@/context/openModal"
+import { cursosInfo } from "@/cursosInfo"
+import { RiDeleteBin6Line } from "react-icons/ri"
+import Image from "next/image"
+import Link from "next/link"
+import { handleCheckout } from "@/checkoutCart"
 
 export default function CartModal() {
   const { isOpen, setIsOpen, setCantCart, cartInfo, setCartInfo } =
-    useContext(OpenModalContext);
-  const [subTotal, setSubTotal] = useState(0);
-  const handleClose = () => setIsOpen(false);
+    useContext(OpenModalContext)
+  const [subTotal, setSubTotal] = useState(0)
+  const handleClose = () => setIsOpen(false)
 
   useEffect(() => {
-    const cartInformacion = JSON.parse(localStorage.getItem("cartInfo"));
-    setCartInfo(cartInformacion);
-  }, []);
+    const cartInformacion = JSON.parse(localStorage.getItem("cartInfo"))
+    setCartInfo(cartInformacion)
+  }, [])
 
   useEffect(() => {
     const sumarTotal = async () => {
-      const cartInformacion = JSON.parse(localStorage.getItem("cartInfo"));
+      const cartInformacion = JSON.parse(localStorage.getItem("cartInfo"))
       if (cartInformacion) {
         const total = await cartInformacion.reduce((acumulador, item) => {
-          return acumulador + item.cantidad * item.precio;
-        }, 0);
+          return acumulador + item.cantidad * item.precio
+        }, 0)
 
-        setSubTotal(total || 0);
+        setSubTotal(total || 0)
       } else {
-        setSubTotal(0);
+        setSubTotal(0)
       }
-    };
-    sumarTotal();
-  }, [cartInfo]);
+    }
+    sumarTotal()
+  }, [cartInfo])
 
   const deleteOnCart = (id) => {
-    const cartInfo = JSON.parse(localStorage.getItem("cartInfo"));
-    const index = cartInfo.findIndex((item) => item.id === id);
-    cartInfo.splice(index, 1);
-    localStorage.setItem("cartInfo", JSON.stringify(cartInfo));
-    setCartInfo(cartInfo);
+    const cartInfo = JSON.parse(localStorage.getItem("cartInfo"))
+    const index = cartInfo.findIndex((item) => item.id === id)
+    cartInfo.splice(index, 1)
+    localStorage.setItem("cartInfo", JSON.stringify(cartInfo))
+    setCartInfo(cartInfo)
     const totalCantidad = cartInfo?.reduce((acumulador, item) => {
-      return acumulador + (item.cantidad || 0);
-    }, 0);
-    setCantCart(totalCantidad);
-  };
+      return acumulador + (item.cantidad || 0)
+    }, 0)
+    setCantCart(totalCantidad)
+  }
 
   const actualizarCantidad = (e, id) => {
-    const cartInfo = JSON.parse(localStorage.getItem("cartInfo"));
-    const index = cartInfo.findIndex((item) => item.id === id);
-    cartInfo[index].cantidad = Number(e.target.value);
-    localStorage.setItem("cartInfo", JSON.stringify(cartInfo));
-    setCartInfo(cartInfo);
+    const cartInfo = JSON.parse(localStorage.getItem("cartInfo"))
+    const index = cartInfo.findIndex((item) => item.id === id)
+    cartInfo[index].cantidad = Number(e.target.value)
+    localStorage.setItem("cartInfo", JSON.stringify(cartInfo))
+    setCartInfo(cartInfo)
     const totalCantidad = cartInfo?.reduce((acumulador, item) => {
-      return acumulador + (item.cantidad || 0);
-    }, 0);
-    setCantCart(totalCantidad);
-  };
+      return acumulador + (item.cantidad || 0)
+    }, 0)
+    setCantCart(totalCantidad)
+  }
 
   return (
     <>
       <Drawer open={isOpen} onClose={handleClose} position="right">
         <Drawer.Header title="Your Cart" />
         <Drawer.Items>
-          {console.log(cartInfo)}
           {cartInfo?.map((item, i) => {
-            const curso = cursosInfo.find((curso) => curso.id === item.id);
+            const curso = cursosInfo.find((curso) => curso.id === item.id)
             return (
               <div
                 key={i}
@@ -97,7 +96,7 @@ export default function CartModal() {
                       onKeyDown={(e) => {
                         // Permite solo el uso de las flechas arriba y abajo
                         if (e.key !== "ArrowUp" && e.key !== "ArrowDown") {
-                          e.preventDefault();
+                          e.preventDefault()
                         }
                       }}
                     />
@@ -110,7 +109,7 @@ export default function CartModal() {
                   </div>
                 </div>
               </div>
-            );
+            )
           })}
           {cartInfo?.length > 0 ? (
             <div>
@@ -140,5 +139,5 @@ export default function CartModal() {
         </Drawer.Items>
       </Drawer>
     </>
-  );
+  )
 }

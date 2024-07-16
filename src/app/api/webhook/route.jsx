@@ -1,39 +1,40 @@
-import { NextResponse } from "next/server";
-import Stripe from "stripe";
-import { headers } from "next/headers";
-import { Resend } from "resend";
-import { cursosInfo } from "@/cursosInfo";
+import { NextResponse } from "next/server"
+import Stripe from "stripe"
+import { headers } from "next/headers"
+import { Resend } from "resend"
+import { cursosInfo } from "@/cursosInfo"
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-const resend = new Resend("re_QpfqvXFg_7FY6LdA53EXGM5T22kSoFyCE");
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
+const resend = new Resend("re_QpfqvXFg_7FY6LdA53EXGM5T22kSoFyCE")
 
 export async function POST(request) {
-  const body = await request.text();
-  const headersList = headers();
-  const sig = headersList.get("stripe-signature");
+  const body = await request.text()
+  const headersList = headers()
+  const sig = headersList.get("stripe-signature")
 
-  let event;
+  let event
 
   try {
     event = stripe.webhooks.constructEvent(
       body,
       sig,
       process.env.STRIPE_WEBHOOK_SECRET
-    );
+    )
   } catch (error) {
-    console.console.log(error.message);
-    return NextResponse.error({ error: error.message });
+    console.console.log(error.message)
+    return NextResponse.error({ error: error.message })
   }
 
   switch (event.type) {
     case "checkout.session.completed":
-      const session = event.data.object;
-      const productos = JSON.parse(session.metadata.data);
-      const nombreCliente = session.customer_details.name;
-      const correoCliente = session.customer_details.email;
-      const total = session.amount_total / 100;
-      const idTransaccion = session.payment_intent;
-
+      const session = event.data.object
+      const productos = JSON.parse(session.metadata.data)
+      const nombreCliente = session.customer_details.name
+      const correoCliente = session.customer_details.email
+      const total = session.amount_total / 100
+      const idTransaccion = session.payment_intent
+      console.log(session)
+      /*
       const respuesta = await resend.emails.send({
         from: "no-reply@fyrlois.us",
         to: correoCliente,
@@ -86,11 +87,11 @@ export async function POST(request) {
                 <h3>Total: ${total}</h3>
                 `,
       });
-
-      break;
+*/
+      break
     default:
-      console.log(`Unhandled event type ${event.type}`);
+      console.log(`Unhandled event type ${event.type}`)
   }
 
-  return new Response(null, { status: 200 });
+  return new Response(null, { status: 200 })
 }
