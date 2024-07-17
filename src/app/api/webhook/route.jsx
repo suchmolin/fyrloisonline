@@ -33,10 +33,11 @@ export async function POST(request) {
       const correoCliente = session.customer_details.email
       const total = session.amount_total / 100
       const idTransaccion = session.payment_intent
-      console.log("new date", new Date(session.created).toDateString())
-      console.log("created", session.created)
-      console.log("typeof", typeof session.created)
-      // console.log(session.custom_fields[0].numeric.value) NUMERO DE TELEFONO DEL CLIENTE
+      const fecha = session.metadata.date
+      const telefono = session.custom_fields[0].numeric.value
+      console.log({ fecha })
+      console.log({ telefono })
+
       /*const respuesta = await resend.emails.send({
         from: "no-reply@fyrlois.us",
         to: correoCliente,
