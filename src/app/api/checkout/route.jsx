@@ -38,6 +38,9 @@ export async function POST(req, res) {
         type: "numeric",
       },
     ],
+    payment_intent_data: {
+      description: "Pagina Web Fyr Lois",
+    },
   })
 
   return NextResponse.json({ data: session, message: "datos recibidos" })
