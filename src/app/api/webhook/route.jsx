@@ -33,8 +33,9 @@ export async function POST(request) {
       const correoCliente = session.customer_details.email
       const total = session.amount_total / 100
       const idTransaccion = session.payment_intent
+      console.log(session)
       // console.log(session.custom_fields[0].numeric.value) NUMERO DE TELEFONO DEL CLIENTE
-      const respuesta = await resend.emails.send({
+      /*const respuesta = await resend.emails.send({
         from: "no-reply@fyrlois.us",
         to: correoCliente,
         subject: "PAGO ONLINE Fyr Lois Online",
