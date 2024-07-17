@@ -33,7 +33,7 @@ export async function POST(request) {
       const correoCliente = session.customer_details.email
       const total = session.amount_total / 100
       const idTransaccion = session.payment_intent
-      const fecha = session.metadata.date
+      const fecha = JSON.parse(session.metadata.date)
       const telefono = session.custom_fields[0].numeric.value
       console.log({ fecha })
       console.log({ telefono })
