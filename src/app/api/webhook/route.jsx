@@ -36,7 +36,7 @@ export async function POST(request) {
       const fecha = JSON.parse(session.metadata.date)
       const telefono = session.custom_fields[0].numeric.value
       console.log(new Date(session.created * 1000).toLocaleString())
-      console.log({ telefono })
+      console.log(session.created)
 
       /*const respuesta = await resend.emails.send({
         from: "no-reply@fyrlois.us",
