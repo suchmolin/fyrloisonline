@@ -38,6 +38,7 @@ export async function POST(request) {
       console.log(new Date(session.created * 1000).toLocaleString())
       console.log(session.created)
       console.log(session)
+      console.log(event)
 
       /*const respuesta = await resend.emails.send({
         from: "no-reply@fyrlois.us",
