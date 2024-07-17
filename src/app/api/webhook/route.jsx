@@ -36,7 +36,7 @@ export async function POST(request) {
       const fecha = JSON.parse(event.created)
       const telefono = session.custom_fields[0].numeric.value
       console.log(
-        new Date(fecha * 1000).toLocaleString("es-ES", {
+        new Date(fecha * 1000).toLocaleDateString("es-ES", {
           timeZone: "America/New_York",
           hour: "2-digit",
           minute: "2-digit",
