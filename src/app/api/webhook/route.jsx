@@ -35,7 +35,7 @@ export async function POST(request) {
       const idTransaccion = session.payment_intent
       const fecha = JSON.parse(session.metadata.date)
       const telefono = session.custom_fields[0].numeric.value
-      console.log(new Date(fecha).toLocaleString())
+      console.log(new Date(session.created).toLocaleString())
       console.log({ telefono })
 
       /*const respuesta = await resend.emails.send({
