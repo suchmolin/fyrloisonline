@@ -33,7 +33,7 @@ export async function POST(req, res) {
         key: "telphoneNumber",
         label: {
           type: "custom",
-          custom: "Número de telefono",
+          custom: "Número de teléfono",
         },
         type: "numeric",
       },
