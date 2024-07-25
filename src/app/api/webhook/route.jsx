@@ -46,7 +46,7 @@ export async function POST(request) {
       console.log(session)
       console.log(event)
 
-      /*const respuesta = await resend.emails.send({
+      const respuesta = await resend.emails.send({
         from: "no-reply@fyrlois.us",
         to: correoCliente,
         subject: "PAGO ONLINE Fyr Lois Online",
@@ -62,7 +62,7 @@ export async function POST(request) {
                   return `
                     <div>
                       <h3>${curso.title}</h3>
-                      <img width="100px" height="auto" src="https://fyrlois-us.vercel.app/_next/image?url=%2Fimg%2F${curso.img}&w=1920&q=75" />
+                      <img width="100px" height="auto" src="https://fyrloisus-yovsj7pvfq-uc.a.run.app/_next/image?url=%2Fimg%2F${curso.img}&w=1920&q=75" />
                       <p>precio: ${curso.price}</p>
                       <p>cantidad: ${producto.cantidad}</p>
                     </div>

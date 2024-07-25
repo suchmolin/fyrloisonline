@@ -15,7 +15,7 @@ export async function POST(req, res) {
         product_data: {
           name: curso.title,
           images: [
-            `https://fyrlois-us.vercel.app/_next/image?url=%2Fimg%2F${curso.img}&w=1920&q=75`, //CAMBIO EN PRODUCCION
+            `https://fyrloisus-yovsj7pvfq-uc.a.run.app/_next/image?url=%2Fimg%2F${curso.img}&w=1920&q=75`, //CAMBIO EN PRODUCCION
           ],
         },
         unit_amount: curso.price * 100,
@@ -24,7 +24,7 @@ export async function POST(req, res) {
     }
   })
   const session = await stripe.checkout.sessions.create({
-    success_url: "https://fyrlois-us.vercel.app/checkout-success", //CAMBIO EN PRODUCCION
+    success_url: "https://fyrloisus-yovsj7pvfq-uc.a.run.app/checkout-success", //CAMBIO EN PRODUCCION
     line_items: items,
     metadata: { data: JSON.stringify(data), date: Date.now() },
     mode: "payment",
