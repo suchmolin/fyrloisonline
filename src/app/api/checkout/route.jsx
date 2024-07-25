@@ -45,4 +45,3 @@ export async function POST(req, res) {
 
   return NextResponse.json({ data: session, message: "datos recibidos" })
 }
-//test
