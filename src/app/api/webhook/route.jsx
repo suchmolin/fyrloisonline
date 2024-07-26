@@ -61,9 +61,9 @@ export async function POST(request) {
           Numero de transaccion: ${idTransaccion}
         </h2>
 
-        <div style="display: flex; gap: 28px; padding-top: 40px; padding-bottom: 40px; justify-content: center; font-size: 12px; line-height: 16px; width: 100px;" >
+        <div style="display: flex; gap: 28px; padding-top: 40px; padding-bottom: 40px; justify-content: center; font-size: 12px; line-height: 16px; width: 100%;" >
           <div>
-            <h3 style="font-weight: bold; color: rgb(107 114 128); padding-right: 28px;" >Monto Pagado</h3>
+            <h3 style="font-weight: bold; color: rgb(107 114 128);  padding-right: 28px;" >Monto Pagado</h3>
             <p>$${total}.00</p>
           </div>
           <div>
@@ -88,7 +88,7 @@ export async function POST(request) {
                   src="https://fyrlois-us.vercel.app/_next/image?url=%2Fimg%2F${curso.img}&w=1920&q=75"
                   alt="${curso.title}"
                 />
-                <div style="display: flex; justify-content: space-between; width: 380px;">
+                <div style="display: flex; justify-content: space-between; width: 350px;">
                   <p>${curso.title} x ${producto.cantidad}</p>
                   <p>$${curso.price}.00</p>
                 </div>
