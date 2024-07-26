@@ -42,46 +42,72 @@ export async function POST(request) {
           minute: "2-digit",
         })
       )
-      console.log(fecha)
-      console.log(session)
-      console.log(event)
 
       const respuesta = await resend.emails.send({
         from: "no-reply@fyrlois.us",
         to: correoCliente,
         subject: "PAGO ONLINE Fyr Lois Online",
         html: `
-        <h1>Hola, ${nombreCliente}</h1>
+
+              <h1>Hola, ${nombreCliente}</h1>
                 <p>se ha registrado un pago con identificador: ${idTransaccion}</p>
                 <p>en un lapso maximo de 48 horas, será contactado al correo: ${correoCliente} por un agente autorizado.</p>
-                <p>informacion del pago:</p>
-                ${productos.map((producto) => {
-                  const curso = cursosInfo.find(
-                    (curso) => curso.id === producto.id
-                  )
-                  return `
-                    <div>
-                      <h3>${curso.title}</h3>
-                      <img width="100px" height="auto" src="https://fyrloisus-yovsj7pvfq-uc.a.run.app/_next/image?url=%2Fimg%2F${curso.img}&w=1920&q=75" />
-                      <p>precio: ${curso.price}</p>
-                      <p>cantidad: ${producto.cantidad}</p>
+
+
+
+          <div className="w-[450px] text-sm mt-2 ml-2 rounded-md overflow-hidden">
+            <img src="/img/headEmail.png" alt="" />
+            <h2 className="text-center ">
+              Numero de transaccion: ${idTransaccion}
+            </h2>
+
+            <div className="flex gap-7 py-10 justify-center text-xs">
+              <div>
+                <h3 className="font-bold text-gray-500">Monto Pagado</h3>
+                <p>$${total}.00</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-500">Fecha de pago</h3>
+                <p>${fecha}</p>
+              </div>
+              
+            </div>
+            <div className="px-10">
+              <h3 className="font-bold text-gray-500">Pagado desde</h3>
+              <p>Pagina web Fyr Lois</p>
+            </div>
+
+            <div className="w-full bg-slate-100 text-xs px-4 py-3 mt-8">
+              ${productos.map((producto) => {
+                const curso = cursosInfo.find(
+                  (curso) => curso.id === producto.id
+                )
+                return `
+                  <div className="flex gap-4 items-center py-2">
+                    <img
+                      className="w-[50px] h-[50px]"
+                      src="/img/${curso.img}"
+                      alt="${curso.title}"
+                    />
+                    <div className="flex justify-between w-full">
+                      <p>${curso.title} x ${producto.cantidad}</p>
+                      <p>$${curso.price}.00</p>
                     </div>
-                        `
-                })}
-                        <hr />
-                        <h3>Total: ${total}</h3>
+                  </div>
+                  `
+              })}
+              
+              <hr />
+              <div className="flex justify-between py-3 font-bold text-cyan-800">
+                <p className="">Monto Total</p>
+                <p>$${total}.00</p>
+              </div>
+              <p className="text-gray-500">Numero de telefono : ${telefono}</p>
+              <p className="text-gray-500">Correo Electrónico : ${correoCliente}</p>
+            </div>
+          </div>
 
-                        <div class="email" style="background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
-                          <h1 style="color: #333333; font-size: 24px; margin-bottom: 10px;">Aviso importante</h1>
-                          <p style="color: #666666; font-size: 16px; margin-bottom: 10px;">Estimado cliente,</p>
-                          <p style="color: #666666; font-size: 16px; margin-bottom: 10px;">Le informamos que habrá un mantenimiento programado en nuestro sistema el próximo viernes. Durante este tiempo, es posible que experimente interrupciones en el servicio.</p>
-                          <p style="color: #666666; font-size: 16px; margin-bottom: 10px;">Le pedimos disculpas por cualquier inconveniente que esto pueda causar. Estamos trabajando arduamente para minimizar cualquier impacto en su experiencia.</p>
-                          <p style="color: #666666; font-size: 16px; margin-bottom: 10px;">Si tiene alguna pregunta o necesita asistencia adicional, no dude en ponerse en contacto con nuestro equipo de soporte.</p>
-                          <p style="color: #666666; font-size: 16px; margin-bottom: 10px;">Gracias por su comprensión.</p>
-                          <p style="color: #666666; font-size: 16px; margin-bottom: 10px;">Atentamente,</p>
-                          <p style="color: #666666; font-size: 16px; margin-bottom: 0;">El equipo de soporte</p>
-                        </div>
-
+                        
                         `,
       })
       /*
