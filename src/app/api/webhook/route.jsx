@@ -55,60 +55,56 @@ export async function POST(request) {
 
 
 
-          <div className="w-[450px] text-sm mt-2 ml-2 rounded-md overflow-hidden">
-            <img src="/img/headEmail.png" alt="" />
-            <h2 className="text-center ">
-              Numero de transaccion: ${idTransaccion}
-            </h2>
+          <div style="width: 450px; font-size: 12px; line-height: 16px; margin-left: 8px; border-radius: 6px; overflow: hidden;">
+        <img style="width: 100%; height: auto;" src="https://fyrlois-us.vercel.app/_next/image?url=%2Fimg%2FheadEmail.png&w=1920&q=75" alt="" />
+        <h2 style="text-align: center;">
+          Numero de transaccion: ${idTransaccion}
+        </h2>
 
-            <div className="flex gap-7 py-10 justify-center text-xs">
-              <div>
-                <h3 className="font-bold text-gray-500">Monto Pagado</h3>
-                <p>$${total}.00</p>
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-500">Fecha de pago</h3>
-                <p>${fecha}</p>
-              </div>
-              
-            </div>
-            <div className="px-10">
-              <h3 className="font-bold text-gray-500">Pagado desde</h3>
-              <p>Pagina web Fyr Lois</p>
-            </div>
-
-            <div className="w-full bg-slate-100 text-xs px-4 py-3 mt-8">
-              ${productos.map((producto) => {
-                const curso = cursosInfo.find(
-                  (curso) => curso.id === producto.id
-                )
-                return `
-                  <div className="flex gap-4 items-center py-2">
-                    <img
-                      className="w-[50px] h-[50px]"
-                      src="/img/${curso.img}"
-                      alt="${curso.title}"
-                    />
-                    <div className="flex justify-between w-full">
-                      <p>${curso.title} x ${producto.cantidad}</p>
-                      <p>$${curso.price}.00</p>
-                    </div>
-                  </div>
-                  `
-              })}
-              
-              <hr />
-              <div className="flex justify-between py-3 font-bold text-cyan-800">
-                <p className="">Monto Total</p>
-                <p>$${total}.00</p>
-              </div>
-              <p className="text-gray-500">Numero de telefono : ${telefono}</p>
-              <p className="text-gray-500">Correo Electrónico : ${correoCliente}</p>
-            </div>
+        <div style="display: flex; gap: 28px; padding-top: 40px; padding-bottom: 40px; justify-content: center; font-size: 12px; line-height: 16px;" >
+          <div>
+            <h3 style="font-weight: bold; color: rgb(107 114 128);" >Monto Pagado</h3>
+            <p>$${total}.00</p>
           </div>
+          <div>
+            <h3 style="font-weight: bold; color: rgb(107 114 128);" >Fecha de pago</h3>
+            <p>${fecha}</p>
+          </div>
+          
+        </div>
+        <div style="padding-left: 40px; padding-right: 40px;">
+          <h3 style="font-weight: bold; color: rgb(107 114 128);" >Pagado desde</h3>
+          <p>Pagina web Fyr Lois</p>
+        </div>
 
-                        
-                        `,
+        <div style="width: 100%; background-color: rgb(241 245 249); font-size: 14px; line-height: 16px; padding: 12px 16px; margin-top: 12px;">
+          ${productos.map((producto) => {
+            const curso = cursosInfo.find((curso) => curso.id === producto.id)
+            return `
+              <div style="display: flex; gap: 16px; align-items: center; padding-top: 16px; padding-bottom: 16px;" >
+                <img
+                style="width: 50px; height: 50px;"
+                  
+                  src="https://fyrlois-us.vercel.app/_next/image?url=%2Fimg%2F${curso.img}&w=1920&q=75"
+                  alt="${curso.title}"
+                />
+                <div style="display: flex; justify-content: space-between; width: 100%;">
+                  <p>${curso.title} x ${producto.cantidad}</p>
+                  <p>$${curso.price}.00</p>
+                </div>
+              </div>
+              `
+          })}
+          
+          <hr />
+          <div style="display: flex; justify-content: space-between; padding: 12px 0; font-weight: bold; color: rgb(21 94 117);;" >
+            <p>Monto Total</p>
+            <p>$${total}.00</p>
+          </div>
+          <p style="color: rgb(107 114 128);">Numero de telefono : ${telefono}</p>
+          <p style="color: rgb(107 114 128);">Correo Electrónico : ${correoCliente}</p>
+        </div>
+      </div>`,
       })
       /*
                 const respuesta2 = await resend.emails.send({
