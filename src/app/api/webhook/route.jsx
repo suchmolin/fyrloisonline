@@ -44,7 +44,7 @@ export async function POST(request) {
 
               <h1>Hola, ${nombreCliente}</h1>
                 <p>se ha registrado un pago con identificador: ${idTransaccion}</p>
-                <p>en un lapso maximo de 48 horas, será contactado al correo: ${correoCliente} por un agente autorizado.</p>
+                <p>En un lapso de máximo de 48 horas, serás contactado al correo: ${correoCliente} por nuestro equipo de Atención.</p>
 
 
 
@@ -97,6 +97,7 @@ export async function POST(request) {
           <p style="color: rgb(107 114 128);">Numero de telefono : ${telefono}</p>
           <p style="color: rgb(107 114 128);">Correo Electrónico : ${correoCliente}</p>
         </div>
+        <p>Para más información, puedes comunicarte con nosotros, vía WhatsApp, por el número telefónico: +1 (786) 626-6559</p>
       </div>`,
       })
       /*
