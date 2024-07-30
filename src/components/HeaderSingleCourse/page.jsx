@@ -34,7 +34,7 @@ export default function HeaderSingleCourse(props) {
                 Clases 100% en inglés
               </p>
             </div>
-            <div className="flex gap-4  w-10/12 md:w-8/12 lg:w-full">
+            <div className="flex gap-4  w-10/12 md:w-8/12 lg:w-full mt-8 md:mt-0">
               <p className="flex flex-col sm:flex-row items-center gap-2 h-[70px] sm:h-[25px] w-[230px] text-gray-500">
                 <Image
                   src="/img/course3.png"
