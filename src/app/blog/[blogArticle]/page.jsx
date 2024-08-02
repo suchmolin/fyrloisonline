@@ -80,7 +80,7 @@ export default function ArticulosBlog({ params }) {
       </div>
       <div className="w-full flex flex-col">
         <h2 className="text-[#000b7a] text-5xl py-10 px-5 text-center">
-          Ultimos Articulos
+          Últimos Artículos
         </h2>
         <BlogUltimosArticulos />
       </div>
