@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import { Fade } from "react-awesome-reveal";
+"use client"
+import Image from "next/image"
+import { Fade } from "react-awesome-reveal"
 
 export default function TrabajamosCon() {
   const imagenes = [
@@ -40,13 +40,7 @@ export default function TrabajamosCon() {
       width: 150,
       height: 74,
     },
-    {
-      img: "/img/empresa7.png",
-      alt: "empresa 7",
-      width: 150,
-      height: 74,
-    },
-  ];
+  ]
   return (
     <>
       <Fade
@@ -72,5 +66,5 @@ export default function TrabajamosCon() {
         </div>
       </Fade>
     </>
-  );
+  )
 }
