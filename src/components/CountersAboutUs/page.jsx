@@ -7,7 +7,7 @@ export default function CountersAboutUs() {
         <CountUp
           className="text-2xl md:text-5xl font-bold"
           prefix="+"
-          subfix="k"
+          suffix="k"
           end={100}
           duration={5}
         />
@@ -26,10 +26,10 @@ export default function CountersAboutUs() {
         <CountUp
           className="text-2xl md:text-5xl font-bold"
           prefix="+"
-          end={50}
+          end={100}
           duration={5}
         />
-        <p className="text-lg md:text-xl px-2">Profesores certificados</p>
+        <p className="text-lg md:text-xl px-2">Profesores certificados CELTA</p>
       </div>
     </div>
   );

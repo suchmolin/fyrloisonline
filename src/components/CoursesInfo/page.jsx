@@ -6,24 +6,32 @@ export default function CoursesInfo(props) {
   const [selectedTab, setSelectedTab] = useState("Contenido del Curso");
 
   return (
-    <div className="w-full flex flex-col font-[lato]">
+    <div className="w-full lg:min-h-[1000px] flex flex-col font-[lato]">
       <div className="w-11/12 lg:w-7/12 flex flex-col pl-10 md:pl-32 py-5 md:py-20">
         <ul className="w-full lg:w-9/12 flex flex-col md:flex-row justify-center border-b-2 border-gray-200">
           <li
             onClick={() => setSelectedTab("Sobre el Curso")}
-            className={`text-xl text-gray-500 py-4 border-[#90d400] px-4 hover:text-[#90d400] cursor-pointer transition-all duration-300 ${selectedTab === "Sobre el Curso" ? "border-b-4" : "border-b-0"}`}
+            className={`text-xl text-gray-500 py-4 border-[#90d400] px-4 hover:text-[#90d400] cursor-pointer transition-all duration-300 ${
+              selectedTab === "Sobre el Curso" ? "border-b-4" : "border-b-0"
+            }`}
           >
             Sobre el Curso
           </li>
           <li
             onClick={() => setSelectedTab("Contenido del Curso")}
-            className={`text-xl text-gray-500 py-4 border-[#90d400] px-4 hover:text-[#90d400] cursor-pointer transition-all duration-300 ${selectedTab === "Contenido del Curso" ? "border-b-4" : "border-b-0"}`}
+            className={`text-xl text-gray-500 py-4 border-[#90d400] px-4 hover:text-[#90d400] cursor-pointer transition-all duration-300 ${
+              selectedTab === "Contenido del Curso"
+                ? "border-b-4"
+                : "border-b-0"
+            }`}
           >
             Contenido del curso
           </li>
           <li
             onClick={() => setSelectedTab("Resenas")}
-            className={`text-xl text-gray-500 py-4 border-[#90d400] px-4 hover:text-[#90d400] cursor-pointer transition-all duration-300 ${selectedTab === "Resenas" ? "border-b-4" : "border-b-0"}`}
+            className={`text-xl text-gray-500 py-4 border-[#90d400] px-4 hover:text-[#90d400] cursor-pointer transition-all duration-300 ${
+              selectedTab === "Resenas" ? "border-b-4" : "border-b-0"
+            }`}
           >
             Reseñas
           </li>

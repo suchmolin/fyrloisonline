@@ -21,7 +21,7 @@ export default function ComoAprenderas() {
         </div>
         <div className="w-full flex flex-col md:flex-row gap-10 lg:gap-20 justify-center">
           <div className="w-12/12 sm:w-11/12 md:w-5/12 flex flex-col gap-20 border-0 lg:border-r-[1px] border-[#000b7a]">
-            <div className="flex">
+            <div className="flex flex-col sm:flex-row justify-center items-center">
               <div className="min-w-[100px]">
                 <Image
                   src="/img/comoAprender1.png"
@@ -30,7 +30,7 @@ export default function ComoAprenderas() {
                   height={80}
                 />
               </div>
-              <div className="px-2 lg:px-10">
+              <div className="px-2 lg:px-10 text-center">
                 <h4 className="text-[#000b7a] text-2xl font-bold mb-3">
                   Con clases 100% en vivo y en inglés.
                 </h4>
@@ -40,7 +40,7 @@ export default function ComoAprenderas() {
                 </p>
               </div>
             </div>
-            <div className="flex">
+            <div className="flex flex-col sm:flex-row justify-center items-center">
               <div className="min-w-[100px]">
                 <Image
                   src="/img/comoAprender2.png"
@@ -49,7 +49,7 @@ export default function ComoAprenderas() {
                   height={80}
                 />
               </div>
-              <div className="px-2 lg:px-10">
+              <div className="px-2 lg:px-10 text-center">
                 <h4 className="text-[#000b7a] text-2xl font-bold mb-3">
                   Metodología efectiva.
                 </h4>
@@ -62,7 +62,7 @@ export default function ComoAprenderas() {
             </div>
           </div>
           <div className="w-12/12 sm:w-11/12 md:w-5/12 flex flex-col gap-20 ">
-            <div className="flex">
+            <div className="flex flex-col sm:flex-row justify-center items-center">
               <div className="min-w-[100px]">
                 <Image
                   src="/img/comoAprender3.png"
@@ -71,7 +71,7 @@ export default function ComoAprenderas() {
                   height={80}
                 />
               </div>
-              <div className="px-2 lg:px-10">
+              <div className="px-2 lg:px-10 text-center">
                 <h4 className="text-[#000b7a] text-2xl font-bold mb-3">
                   Acompañamiento calificado.
                 </h4>
@@ -82,7 +82,7 @@ export default function ComoAprenderas() {
                 </p>
               </div>
             </div>
-            <div className="flex">
+            <div className="flex flex-col sm:flex-row justify-center items-center">
               <div className="min-w-[100px]">
                 <Image
                   src="/img/comoAprender4.png"
@@ -91,7 +91,7 @@ export default function ComoAprenderas() {
                   height={80}
                 />
               </div>
-              <div className="px-2 lg:px-10">
+              <div className="px-2 lg:px-10 text-center">
                 <h4 className="text-[#000b7a] text-2xl font-bold mb-3">
                   Objetivos alcanzables.
                 </h4>

@@ -25,9 +25,7 @@ export const cursosInfo = [
       {
         titulo: "Contenido del curso",
         ul: [
-          " Lenguaje básico de un aula de clases como.",
-          "Tipos de figuras geométricas",
-          "Tamaños, colores y precios de los objetos.",
+          "Lenguaje básico de un aula de clases como: Tipos de figuras geométricas, Tamaños, colores y precios de los objetos.",
           "Descripciones: objetos, clima, familia, partes del cuerpo y apariencia física, talentos, áreas del hogar, actividades que hacen en casa, rutinas propias y de otras personas, preferencias de comida y entretenimiento.",
           "Sitios más comunes de la ciudad.",
           "Profesiones, sitios de trabajo y qué quiero ser cuando crezca.",

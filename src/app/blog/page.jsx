@@ -5,7 +5,7 @@ export default function Blog() {
     <div className="w-full flex flex-col items-center py-20">
       <div className="w-full flex flex-col">
         <h2 className="text-[#000b7a] text-5xl py-10 px-5 text-center">
-          Ultimos Articulos
+          Últimos Artículos
         </h2>
         <BlogUltimosArticulos />
       </div>

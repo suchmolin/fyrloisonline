@@ -7,7 +7,7 @@ export default function TarjetaCompraCurso(props) {
   return (
     <div className="sticky top-0 right-0 h-fit overflow-hidden rounded-xl lg:p-10 shadow-2xl">
       <div
-        className={`w-[350px] flex flex-col min-h-[400px]  rounded-lg  overflow-hidden transition-all duration-300 bg-white`}
+        className={`w-[300px] md:w-[350px] flex flex-col min-h-[400px]  rounded-lg  overflow-hidden transition-all duration-300 bg-white`}
       >
         <div className="relative w-full min-h-[300px]">
           <Image

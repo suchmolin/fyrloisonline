@@ -15,7 +15,7 @@ export default function NuestrosTeachers() {
       nombre: "Yheissi Blanco",
       cargo: "DIRECTORA ACADEMICA",
       descripcion:
-        "Directora Académico de Fyr Lois. Encargado de capacitar al equipo de profesores, preparar los programas académicos y asegurar que la metodología se cumpla y se lleve a cabo de manera efectiva.",
+        "Directora Académico de Fyr Lois. Encargada de capacitar al equipo de profesores, preparar los programas académicos y asegurar que la metodología se cumpla y se lleve a cabo de manera efectiva.",
       img: "teacher2.jpg",
       redir: "/teacher/yheissi-blanco",
     },
