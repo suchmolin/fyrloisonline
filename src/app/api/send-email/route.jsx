@@ -1,7 +1,9 @@
 import { Resend } from "resend"
 import { NextResponse } from "next/server"
 
-const resend = new Resend(process.env.RESEND_SECRET_KEY)
+const resendKey = process.env.RESEND_SECRET_KEY || ""
+
+const resend = new Resend(resendKey)
 
 export async function POST(req, res) {
   const data = await req.json()
