@@ -5,7 +5,7 @@ import { Resend } from "resend"
 import { cursosInfo } from "@/cursosInfo"
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
-const resend = new Resend(process.env.RESEND_SECRET_KEY)
+const resend = new Resend("re_GK1bDPUL_6qcUrtCvD1TLGoY6ciVwei4K")
 
 export async function POST(request) {
   const body = await request.text()
