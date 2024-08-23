@@ -5,12 +5,12 @@ const resend = new Resend(process.env.RESEND_SECRET_KEY)
 
 export async function POST(req, res) {
   const data = await req.json()
-  try {
-    const response = await resend.emails.send({
-      from: "no-reply@fyrlois.us",
-      to: "info@fyrlois.us",
-      subject: "CONTACT-US from Fyr Lois Academy Online",
-      html: `
+
+  const respuesta = await resend.emails.send({
+    from: "no-reply@fyrlois.us",
+    to: "info@fyrlois.us",
+    subject: "CONTACT-US from Fyr Lois Academy Online",
+    html: `
     <html>
               <head>
               </head>
@@ -25,11 +25,7 @@ export async function POST(req, res) {
         </html>
         
         `,
-    })
+  })
 
-    return NextResponse.json({ message: "Email sent" })
-  } catch (error) {
-    console.log(error)
-    return NextResponse.error({ error: error.message })
-  }
+  return NextResponse.json({ data: respuesta, message: "Email sent" })
 }
