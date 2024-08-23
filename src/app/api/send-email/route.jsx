@@ -1,9 +1,8 @@
 import { Resend } from "resend"
 import { NextResponse } from "next/server"
 
-const resend = new Resend(process.env.RESEND_SECRET_KEY)
-
 export async function POST(req, res) {
+  const resend = new Resend(process.env.RESEND_SECRET_KEY)
   const data = await req.json()
 
   const respuesta = await resend.emails.send({
