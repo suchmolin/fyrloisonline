@@ -26,7 +26,6 @@ export async function POST(req, res) {
         
         `,
     })
-    console.log(response)
 
     return NextResponse.json({ message: "Email sent" })
   } catch (error) {
