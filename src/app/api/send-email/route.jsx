@@ -1,16 +1,16 @@
 import { Resend } from "resend"
 import { NextResponse } from "next/server"
 
-const resend = new Resend("re_QpfqvXFg_7FY6LdA53EXGM5T22kSoFyCE")
+const resend = new Resend(process.env.RESEND_SECRET_KEY)
 
 export async function POST(req, res) {
   const data = await req.json()
-
-  const respuesta = await resend.emails.send({
-    from: "no-reply@fyrlois.us",
-    to: "info@fyrlois.us",
-    subject: "CONTACT-US from Fyr Lois Academy Online",
-    html: `
+  try {
+    const response = await resend.emails.send({
+      from: "no-reply@fyrlois.us",
+      to: "info@fyrlois.us",
+      subject: "CONTACT-US from Fyr Lois Academy Online",
+      html: `
     <html>
               <head>
               </head>
@@ -25,7 +25,12 @@ export async function POST(req, res) {
         </html>
         
         `,
-  })
+    })
+    console.log(response)
 
-  return NextResponse.json({ data: respuesta, message: "Email sent" })
+    return NextResponse.json({ message: "Email sent" })
+  } catch (error) {
+    console.log(error)
+    return NextResponse.error({ error: error.message })
+  }
 }
