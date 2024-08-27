@@ -10,7 +10,10 @@ export default function FooterMenu() {
             <Link href="/">Home</Link>
           </li>
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
-            <Link aria-label="acerca de nosotros" href="/about-us">
+            <Link
+              aria-label="acerca de nosotros"
+              href="https://fyrloiscom.vercel.app/es/aboutUs"
+            >
               Conócenos
             </Link>
           </li>
@@ -26,15 +29,20 @@ export default function FooterMenu() {
             <Link href="/teacher">Teachers</Link>
           </li>
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
-            <Link href="/blog">Blog</Link>
+            <Link href="https://fyrloiscom.vercel.app/es/blog">Blog</Link>
           </li>
         </ul>
         <ul className="flex flex-col gap-4">
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
-            <Link href="/contact-us">Contacto</Link>
+            <Link href="https://fyrloiscom.vercel.app/es/contactUs">
+              Contacto
+            </Link>
           </li>
           <li className="hover:text-[#90d400] cursor-pointer transition-all duration-300">
-            <Link href="/politicas-de-privacidad">Políticas de </Link>privacidad
+            <Link href="https://fyrloiscom.vercel.app/es/privacy-policies">
+              Políticas de{" "}
+            </Link>
+            privacidad
           </li>
         </ul>
       </div>

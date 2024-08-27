@@ -34,7 +34,7 @@ export default function SeccionMiss() {
             </p>
             <div className="flex h-[70px] items-center justify-center lg:justify-start mt-5 pb-10 lg:pb-0">
               <Link
-                href="/about-us"
+                href="https://fyrloiscom.vercel.app/es/aboutUs"
                 aria-label="Acerca de nosotros"
                 className=" py-4 px-7 bg-[#90d400] hover:bg-transparent hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#90d400] hover:border-[#fff] transition-all duration-200 font-bold z-20"
               >

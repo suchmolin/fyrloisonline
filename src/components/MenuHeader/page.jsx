@@ -26,7 +26,10 @@ export default function MenuHeader() {
       <nav className="relative flex justify-center h-[90px] border-b-2 border-[#000b7a] items-center z-90">
         <div className="w-10/12 flex justify-between items-center">
           <div className="flex gap-10 items-center">
-            <a href="/" className="h-full w-[100px] md:w-[180px]">
+            <a
+              href="https://fyrloiscom.vercel.app"
+              className="h-full w-[100px] md:w-[180px]"
+            >
               <Image
                 src="/img/1.png"
                 alt="logo"

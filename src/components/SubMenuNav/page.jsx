@@ -12,20 +12,20 @@ export default function SubMenuNav() {
       </li>
 
       <li>
-        <Link aria-label="acerca de nosotros" href="/about-us">
+        <Link
+          aria-label="acerca de nosotros"
+          href="https://fyrloiscom.vercel.app/es/aboutUs"
+        >
           Conócenos
         </Link>
       </li>
 
       <li>
-        <Link href="/contact-us">Contacto</Link>
+        <Link href="https://fyrloiscom.vercel.app/es/contactUs">Contacto</Link>
       </li>
 
       <li>
-        <a
-          target="_blank"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdiiOaso_9idAARO2Zd8tL8K9qGM3DSyTvZD8bW13GR0VjnZg/viewform"
-        >
+        <a target="_blank" href="https://fyrloiscom.vercel.app/es/test">
           Test
         </a>
       </li>

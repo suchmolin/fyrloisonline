@@ -42,7 +42,7 @@ export default function BotonesCompraCursos(props) {
       </button>
       <button
         onClick={() => handleCheckout([{ id, cantidad: 1, precio }])}
-        href="/about-us"
+        href="https://fyrloiscom.vercel.app/es/aboutUs"
         aria-label="Acerca de Nosotros"
         className=" py-4 px-7 bg-[#fff] hover:bg-[#90d400] hover:mb-1 rounded-md text-bold text-[#000b7a] hover:text-white border-2 border-[#000b7a] hover:border-[#90d400] transition-all duration-200 font-bold text-xs md:text-base"
       >

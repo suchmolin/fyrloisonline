@@ -21,7 +21,7 @@ export default function Home() {
       <SubSeccionCursos />
       <SeccionMiss />
       <ComoAprenderas />
-      <SeccionBlog />
+      {/*<SeccionBlog />*/}
       <LlevaTuProyecto />
       {/*<SeccionEventos />*/}
     </main>
